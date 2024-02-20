@@ -1,5 +1,3 @@
-@use "mixins" as *;
-
 $width-phone: 320px;
 $width-tablet: 768px;
 $width-desktop: 1440px;
@@ -24,4 +22,10 @@ $color-opacity-violet: #{transparentize($color-base-violet, 0.75)};
 
 :root {
   --font-primary: "Montserrat", "Arial", sans-serif;
+
+  --color-font-basic: #{$color-black};
+
+  --color-bg-basic: #{$color-base-white};
+
+  --color-bd-secondary: #{$color-magnolia};
 }

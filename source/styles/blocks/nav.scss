@@ -1,0 +1,85 @@
+@use "../global/forward" as *;
+@use "sass:math";
+
+.nav {
+  display: flex;
+}
+
+.nav__list {
+  @include list-reset;
+
+  display: none;
+
+  .nav--js-menu-opened & {
+    @media (max-width: $width-tablet - 1px) {
+      z-index: 1;
+      position: absolute;
+      top: 100%;
+      left: calc(-0.5 * (100vw - $width-phone) - $padding-page-phone);
+      display: block;
+      width: 100vw;
+      background-color: var(--color-bg-basic);
+      border-top: 1px solid var(--color-bd-secondary);
+    }
+
+    @media (max-width: $width-phone - 1px) {
+      left: -$padding-page-phone;
+      width: calc(100% + 2 * $padding-page-phone);
+    }
+  }
+}
+
+.nav__item {
+  border-bottom: 1px solid var(--color-bd-secondary);
+}
+
+.nav__link {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-font-basic);
+}
+
+.nav__user {
+  @include list-reset;
+
+  display: flex;
+  gap: 8px;
+  margin-right: 8px;
+}
+
+.nav__user-link {
+  display: flex;
+  align-items: center;
+  width: 52px;
+  height: 60px;
+  cursor: pointer;
+  background: center / 16px 16px no-repeat;
+
+  &--login {
+    background-image: url("../../images/icons/stack.svg#login");
+  }
+
+  &--cart {
+    background-image: url("../../images/icons/stack.svg#cart");
+  }
+}
+
+.nav__user-text {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+}

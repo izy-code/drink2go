@@ -2,12 +2,56 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drink2Go</title>
+    <link rel="preload" href="fonts/montserrat-400.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/montserrat-500.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/montserrat-600.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/montserrat-700.woff2" as="font" crossorigin>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="page__header header">
+      <a class="header__logo logo" href="index.html" aria-current="page">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
+          <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="82" height="36">
+          <img class="logo__icon" src="images/logo-phone.svg" width="32" height="36" alt="Логотип Drink to go.">
+        </picture>
+        <span class="logo__text">Интернет-магазин кофейных напитков</span>
+      </a>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <span class="nav__link nav__link--current">Главная</span>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Каталог</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Доставка</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">О нас</a>
+          </li>
+        </ul>
+        <ul class="nav__user">
+          <li class="nav__user-item">
+            <a class="nav__user-link nav__user-link--login" href="#">
+              <span class="nav__user-text">Войти</span>
+            </a>
+          </li>
+          <li class="nav__user-item">
+            <a class="nav__user-link nav__user-link--cart" href="#">
+              <span class="nav__user-text">Корзина</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__toggle js-toggle-button" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </header>
   </body>
 </html>

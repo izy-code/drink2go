@@ -1,1 +1,5 @@
-/* здесь подключите шрифты */
+@use "forward" as *;
+@include font("Montserrat", montserrat-400, 400, normal);
+@include font("Montserrat", montserrat-500, 500, normal);
+@include font("Montserrat", montserrat-600, 600, normal);
+@include font("Montserrat", montserrat-700, 700, normal);

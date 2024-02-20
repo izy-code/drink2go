@@ -1,5 +1,28 @@
+@use "../global/forward" as *;
+
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.header__toggle {
+  display: block;
+  border: none;
+  width: 52px;
+  height: 60px;
+  margin-right: -12px;
+  cursor: pointer;
+  background: url("../../images/icons/stack.svg#burger") center / 16px 16px no-repeat;
+
+  .header--js-menu-opened & {
+    @media (max-width: $width-tablet - 1px) {
+      background-image: url("../../images/icons/stack.svg#cross");
+    }
+  }
 }

@@ -1,0 +1,29 @@
+@use "../global/forward" as *;
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo__icon {
+  display: block;
+
+  @include media-tablet {
+    width: 82px;
+    height: 36px;
+  }
+
+  @include media-desktop {
+    width: 170px;
+    height: 36px;
+  }
+}
+
+.logo__text {
+  display: none;
+
+  @include media-desktop {
+    display: block;
+  }
+}

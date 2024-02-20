@@ -1,0 +1,35 @@
+@use "../global/forward" as *;
+
+.page {
+  height: 100%;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--color-font-basic);
+}
+
+.page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  justify-content: center;
+  min-width: $width-phone;
+  min-height: 100%;
+  margin: 0;
+  background-color: var(--color-bg-basic);
+}
+
+.page__header {
+  width: $width-phone - 2 * $padding-page-phone;
+  margin-inline: $padding-page-phone;
+
+  @include media-tablet {
+    width: $width-tablet - 2 * $padding-page-tablet;
+    margin-inline: $padding-page-tablet;
+  }
+
+  @include media-desktop {
+    width: $width-desktop - 2 * $padding-page-desktop;
+    margin-inline: $padding-page-desktop;
+  }
+}
