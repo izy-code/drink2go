@@ -4,10 +4,14 @@
   display: inline-flex;
   align-items: center;
   text-decoration: none;
+  gap: 20px;
 }
 
 .logo__icon {
   display: block;
+  width: 32px;
+  height: 36px;
+  max-width: none;
 
   @include media-tablet {
     width: 82px;
@@ -25,5 +29,10 @@
 
   @include media-desktop {
     display: block;
+    max-width: 126px;
+    margin-block: 24px;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-font-basic);
   }
 }

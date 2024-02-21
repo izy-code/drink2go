@@ -3,6 +3,10 @@
 
 .nav {
   display: flex;
+
+  @include media-desktop {
+    display: contents;
+  }
 }
 
 .nav__list {
@@ -27,47 +31,172 @@
       width: calc(100% + 2 * $padding-page-phone);
     }
   }
+
+  @include media-tablet {
+    z-index: 0;
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    width: unset;
+    margin-inline: 12px 60px;
+    border-top: none;
+  }
+
+  @include media-desktop {
+    margin: 0;
+    column-gap: 20px;
+  }
 }
 
 .nav__item {
+  padding: 4px 0;
   border-bottom: 1px solid var(--color-bd-secondary);
+
+  @include media-tablet {
+    padding: 16px 10px;
+    border-bottom: none;
+  }
+
+  @include media-desktop {
+    padding: 8px 0;
+    border-bottom: none;
+  }
 }
 
 .nav__link {
   display: block;
-  width: fit-content;
+  width: 100%;
+  text-align: center;
   margin-inline: auto;
-  padding: 20px;
+  padding: 16px 80px;
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--color-font-basic);
+
+  @include media-tablet {
+    padding: 16px 10px;
+    width: fit-content;
+  }
+
+  @include media-desktop {
+    padding: 24px 20px;
+  }
+
+  &--current {
+    @include media-tablet {
+      color: var(--color-font-selected);
+    }
+  }
+
+  &--current::after {
+    @include media-tablet {
+      --thickness-bd-text: 2px;
+      content: "";
+      display: block;
+      width: calc(100% - var(--thickness-bd-text) + 40px);
+      margin-left: calc(-20px + 0.5 * var(--thickness-bd-text));
+      box-shadow: 0 31px 0 calc(var(--thickness-bd-text) / 2) var(--color-bd-text);
+    }
+  }
+
+  &:hover:not(.nav__link--current),
+  &:focus-visible:not(.nav__link--current) {
+    @include media-hover {
+      color: var(--color-font-selected);
+    }
+  }
+
+  &:active:not(.nav__link--current) {
+    background-color: var(--color-bg-link);
+
+    @include media-tablet {
+      color: var(--color-font-selected);
+    }
+  }
 }
+
 
 .nav__user {
   @include list-reset;
 
   display: flex;
-  gap: 8px;
-  margin-right: 8px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  max-width: 180px;
+
+  @include media-tablet {
+    max-width: 240px;
+  }
+
+  @include media-desktop {
+    max-width: 410px;
+    column-gap: 20px;
+  }
+}
+
+.nav__user-item {
+  padding: 6px;
+
+  @include media-tablet {
+    padding: 16px 6px;
+  }
+
+  @include media-desktop {
+    padding: 8px 0;
+  }
 }
 
 .nav__user-link {
   display: flex;
   align-items: center;
-  width: 52px;
-  height: 60px;
+  gap: 8px;
+  width: 48px;
+  height: 48px;
   cursor: pointer;
-  background: center / 16px 16px no-repeat;
+  text-decoration: none;
+  text-transform: uppercase;
 
-  &--login {
-    background-image: url("../../images/icons/stack.svg#login");
+  @include media-desktop {
+    width: unset;
+    height: unset;
+    padding: 24px 20px;
   }
 
-  &--cart {
-    background-image: url("../../images/icons/stack.svg#cart");
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    mask: center / contain no-repeat;
+    background-color: var(--color-icon-basic);
+  }
+
+  &--login::before {
+    mask-image: url("../../images/icons/stack.svg#login");
+  }
+
+  &--cart::before {
+    mask-image: url("../../images/icons/stack.svg#cart");
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    @include media-hover {
+      background-color: var(--color-icon-hover);
+    }
+  }
+
+  &:active {
+    background-color: var(--color-bg-link);
+
+    &::before {
+      @include media-hover {
+        background-color: var(--color-icon-hover);
+      }
+    }
   }
 }
 
@@ -82,4 +211,31 @@
   padding: 0;
   white-space: nowrap;
   border: 0;
+
+  @include media-desktop {
+    position: static;
+    overflow: visible;
+    clip: unset;
+    clip-path: none;
+    width: unset;
+    height: unset;
+    margin: 0;
+    white-space: normal;
+    border: none;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    color: var(--color-font-basic);
+  }
+
+  .nav__user-link:hover &,
+  .nav__user-link:focus-visible &, {
+    @include media-hover {
+      color: var(--color-font-selected);
+    }
+  }
+
+  .nav__user-link:active & {
+    color: var(--color-font-selected);
+  }
 }
