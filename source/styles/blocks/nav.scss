@@ -74,6 +74,7 @@
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--color-font-basic);
 
   @include media-tablet {
@@ -158,6 +159,7 @@
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
 
   @include media-desktop {
     width: unset;

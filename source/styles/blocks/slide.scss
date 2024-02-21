@@ -1,0 +1,137 @@
+@use "../global/forward" as *;
+
+.slide {
+  display: grid;
+  grid-template-columns: 1fr $width-phone - 2 * $padding-page-phone 1fr;
+  justify-items: center;
+  padding: 20px 0 60px;
+  text-align: center;
+
+  @include media-tablet {
+    grid-template-columns: 1fr calc($width-tablet - 2 * var(--width-button-slider-tablet)) 1fr;
+    padding: 60px 0 0;
+  }
+
+  @include media-desktop {
+    grid-template-columns: 1fr 655px calc($width-desktop - 2 * var(--width-button-slider-tablet) - 655px) 1fr;
+    padding-block: 30px 84px;
+  }
+
+  &--first {
+    background-color: var(--color-bg-first-slide);
+  }
+}
+
+.slider__text-container {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media-tablet {
+    margin-bottom: 20px;
+  }
+
+  @include media-desktop {
+    grid-column: 3 / 4;
+    align-items: normal;
+    padding-top: 150px;
+    text-align: left;
+  }
+}
+
+.slide__title {
+  margin-block: 0 10px;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+
+  @include media-tablet {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+  }
+}
+
+.slide__status {
+  order: -1;
+  margin-block: 0 4px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-font-selected);
+  text-transform: uppercase;
+}
+
+.slide__text {
+  margin-block: 0 20px;
+
+  @include media-tablet {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 40px;
+  }
+}
+
+.slide__order-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: fit-content;
+  margin: 0;
+}
+
+.slide__old-price {
+  margin-right: 6px;
+  font-size: 16px;
+  line-height: 32px;
+  text-decoration: line-through;
+  color: var(--color-font-selected);
+}
+
+.slide__current-price {
+  margin-right: 20px;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.slide__image-container {
+  grid-column: 2 / 3;
+  order: -2;
+  margin-bottom: 10px;
+  width: fit-content;
+
+  @include media-tablet {
+    order: 0;
+    margin-bottom: -188px;
+  }
+
+  @include media-desktop {
+    order: -1;
+    margin-bottom: 0;
+    margin-right: 30px;
+    padding-left: 25px;
+  }
+}
+
+.slide__image {
+  display: block;
+  width: 280px;
+  height: 280px;
+
+  @include media-tablet {
+    width: 476px;
+    height: 476px;
+  }
+
+  @include media-desktop {
+    width: 600px;
+    height: 600px;
+  }
+}

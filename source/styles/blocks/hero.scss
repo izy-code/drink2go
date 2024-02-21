@@ -1,0 +1,13 @@
+@use "../global/forward" as *;
+
+.hero__slider {
+  width: 100vw;
+
+  @media (max-width: $width-phone - 1px) {
+    width: 100%;
+  }
+
+  @include media-tablet {
+    margin-bottom: 188px;
+  }
+}

@@ -1,0 +1,107 @@
+@use "../global/forward" as *;
+
+.slider {
+  display: grid;
+  grid-template-columns: 1fr $padding-page-phone $width-phone - 2 * $padding-page-phone $padding-page-phone 1fr;
+
+  @include media-tablet {
+    --width-button-slider-tablet: 80px;
+
+    grid-template-columns: 1fr var(--width-button-slider-tablet) calc($width-tablet - 2 * var(--width-button-slider-tablet)) var(--width-button-slider-tablet) 1fr;
+  }
+
+  @include media-desktop {
+    grid-template-columns: 1fr var(--width-button-slider-tablet) calc($width-desktop - 2 * var(--width-button-slider-tablet)) var(--width-button-slider-tablet) 1fr;
+  }
+}
+
+.slider__list {
+  @include list-reset;
+
+  grid-area: 1 / 1 / 2 / 6;
+
+  @include media-desktop {
+    grid-area: 1 / 1 / 3 / 6;
+  }
+}
+
+.slider__slide {
+  width: 100%;
+  height: 100%;
+}
+
+.slider__btn {
+  display: flex;
+  width: $padding-page-phone;
+  height: 100%;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include media-tablet {
+    width: var(--width-button-slider-tablet);
+  }
+
+  &::before {
+    content: "";
+    width: 11px;
+    height: 20px;
+    margin: auto;
+    mask: url("../../images/icons/stack.svg#arrow-right") center / contain no-repeat;
+    background-color: var(--color-icon-hover);
+  }
+
+  &--prev {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+
+  &--next {
+    grid-area: 1 / 4 / 3 / 5;
+  }
+
+  &--prev::before {
+    transform: rotate(180deg);
+  }
+}
+
+.slider__pagination {
+  display: none;
+
+  @include media-desktop {
+    @include list-reset;
+
+    grid-area: 2 / 3 / 3 / 4;
+    justify-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 60px;
+  }
+}
+
+.slider__pagination-btn {
+  display: flex;
+  width: 62px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    margin: auto;
+    background-color: var(--color-bg-basic);
+  }
+
+  &--current {
+    cursor: default;
+  }
+
+  &--current::before {
+    background-color: var(--color-bg-button);
+  }
+}

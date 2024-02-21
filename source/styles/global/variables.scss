@@ -24,10 +24,13 @@ $color-opacity-violet: #{transparentize($color-base-violet, 0.75)};
   --font-primary: "Montserrat", "Arial", sans-serif;
 
   --color-font-basic: #{$color-black};
+  --color-font-secondary: #{$color-base-white};
   --color-font-selected: #{$color-base-violet};
 
   --color-bg-basic: #{$color-base-white};
   --color-bg-link: #{$color-magnolia};
+  --color-bg-first-slide: #{$color-flat-white};
+  --color-bg-button: #{$color-base-violet};
 
   --color-bd-secondary: #{$color-magnolia};
   --color-bd-text: #{$color-base-violet};
