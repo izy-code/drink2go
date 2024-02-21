@@ -63,6 +63,40 @@
   &--prev::before {
     transform: rotate(180deg);
   }
+
+  &--prev:hover:not(:disabled),
+  &--prev:focus-visible:not(:disabled) {
+    @include media-hover {
+      background: linear-gradient(90deg, var(--color-bg-basic), transparent 100%);
+    }
+  }
+
+  &--next:hover:not(:disabled),
+  &--next:focus-visible:not(:disabled) {
+    @include media-hover {
+      background: linear-gradient(-90deg, var(--color-bg-basic), transparent 100%);
+    }
+  }
+
+  &--prev:active:not(:disabled) {
+    @include media-hover {
+      background: linear-gradient(90deg, var(--color-bg-button-transparent), transparent 100%);
+    }
+  }
+
+  &--next:active:not(:disabled) {
+    @include media-hover {
+      background: linear-gradient(-90deg, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0) 100%);
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+
+    &::before {
+      background-color: var(--color-icon-disabled);
+    }
+  }
 }
 
 .slider__pagination {
@@ -103,5 +137,18 @@
 
   &--current::before {
     background-color: var(--color-bg-button);
+  }
+
+  &:hover:not(.slider__pagination-btn--current)::before,
+  &:focus-visible:not(.slider__pagination-btn--current)::before {
+    @include media-hover {
+      background-color: var(--color-bg-button);
+      opacity: 0.25;
+    }
+  }
+
+  &:active:not(.slider__pagination-btn--current)::before {
+    background-color: var(--color-bg-button);
+    opacity: 1;
   }
 }

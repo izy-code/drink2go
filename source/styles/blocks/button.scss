@@ -1,3 +1,5 @@
+@use "../global/forward" as *;
+
 .button {
   display: inline-flex;
   padding: 8px 20px;
@@ -9,4 +11,20 @@
   border-radius: 4px;
   color: var(--color-font-secondary);
   cursor: pointer;
+
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    @include media-hover {
+      background-color: var(--color-bg-button-hover);
+    }
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--color-bg-button-active);
+  }
+
+  &:disabled {
+    background-color: var(--color-bg-button-disabled);
+    cursor: default;
+  }
 }

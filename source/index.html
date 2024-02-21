@@ -59,7 +59,7 @@
       <section class="main-index__hero hero" data-test="hero">
         <div class="hero__slider slider">
           <ol class="slider__list">
-            <li class="slider__slide slide slide--first">
+            <li class="slider__slide slide slide--first slide--current">
               <div class="slider__text-container">
                 <h2 class="slide__title">Декаф Флэт Уайт</h2>
                 <p class="slide__status">Новинка!</p>
@@ -94,6 +94,76 @@
                 </picture>
               </div>
             </li>
+            <li class="slider__slide slide slide--second">
+              <div class="slider__text-container">
+                <h2 class="slide__title">Лавандовый Латте</h2>
+                <p class="slide__status">Новинка!</p>
+                <p class="slide__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым
+                  сиропом унесёт вас прямо на вершину Радужных гор</p>
+                <p class="slide__order-details">
+                  <span class="slide__old-price">285₽</span>
+                  <span class="slide__current-price">265₽</span>
+                  <a class="slide__order-link button" href="#">Заказать</a>
+                </p>
+              </div>
+              <div class="slide__image-container">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="images/slides/slide-lavender-desktop@1x.webp, images/slides/slide-lavender-desktop@2x.webp 2x"
+                    width="600" height="600">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="images/slides/slide-lavender-tablet@1x.webp, images/slides/slide-lavender-tablet@2x.webp 2x"
+                    width="476" height="476">
+                  <source type="image/webp"
+                    srcset="images/slides/slide-lavender-phone@1x.webp, images/slides/slide-lavender-phone@2x.webp 2x"
+                    width="280" height="280">
+                  <source media="(min-width: 1440px)"
+                    srcset="images/slides/slide-lavender-desktop@1x.png, images/slides/slide-lavender-desktop@2x.png 2x"
+                    width="600" height="600">
+                  <source media="(min-width: 768px)"
+                    srcset="images/slides/slide-lavender-tablet@1x.png, images/slides/slide-lavender-tablet@2x.png 2x"
+                    width="476" height="476">
+                  <img class="slide__image" src="images/slides/slide-lavender-phone@1x.png"
+                    srcset="images/slides/slide-lavender-phone@2x.png 2x" width="280" height="280"
+                    alt="Алюминиевая банка молочного цвета">
+                </picture>
+              </div>
+            </li>
+            <li class="slider__slide slide slide--third">
+              <div class="slider__text-container">
+                <h2 class="slide__title">Тройной Эспрессо</h2>
+                <p class="slide__status">Новинка!</p>
+                <p class="slide__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из
+                  Колумбии покажет вам, что такое настоящая бодрость</p>
+                <p class="slide__order-details">
+                  <span class="slide__old-price">395₽</span>
+                  <span class="slide__current-price">375₽</span>
+                  <a class="slide__order-link button" href="#">Заказать</a>
+                </p>
+              </div>
+              <div class="slide__image-container">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="images/slides/slide-espresso-desktop@1x.webp, images/slides/slide-espresso-desktop@2x.webp 2x"
+                    width="600" height="600">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="images/slides/slide-espresso-tablet@1x.webp, images/slides/slide-espresso-tablet@2x.webp 2x"
+                    width="476" height="476">
+                  <source type="image/webp"
+                    srcset="images/slides/slide-espresso-phone@1x.webp, images/slides/slide-espresso-phone@2x.webp 2x"
+                    width="280" height="280">
+                  <source media="(min-width: 1440px)"
+                    srcset="images/slides/slide-espresso-desktop@1x.png, images/slides/slide-espresso-desktop@2x.png 2x"
+                    width="600" height="600">
+                  <source media="(min-width: 768px)"
+                    srcset="images/slides/slide-espresso-tablet@1x.png, images/slides/slide-espresso-tablet@2x.png 2x"
+                    width="476" height="476">
+                  <img class="slide__image" src="images/slides/slide-espresso-phone@1x.png"
+                    srcset="images/slides/slide-espresso-phone@2x.png 2x" width="280" height="280"
+                    alt="Алюминиевая банка молочного цвета">
+                </picture>
+              </div>
+            </li>
           </ol>
           <button class="slider__btn slider__btn--prev slider-button-prev" type="button">
             <span class="visually-hidden">Предыдущий слайд</span>
@@ -103,7 +173,7 @@
           </button>
           <ol class="slider__pagination slider-pagination">
             <li class="slider__pagination-item">
-              <button class="slider__pagination-btn slider__pagination-btn--current" type="button">
+              <button class="slider__pagination-btn slider__pagination-btn--current" type="button" disabled>
                 <span class="visually-hidden">Первый слайд</span>
               </button>
             </li>

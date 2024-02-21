@@ -30,11 +30,18 @@ $color-opacity-violet: #{transparentize($color-base-violet, 0.75)};
   --color-bg-basic: #{$color-base-white};
   --color-bg-link: #{$color-magnolia};
   --color-bg-first-slide: #{$color-flat-white};
+  --color-bg-second-slide: #{$color-lavender};
+  --color-bg-third-slide: #{$color-espresso};
   --color-bg-button: #{$color-base-violet};
+  --color-bg-button-hover: #{$color-lighter-violet};
+  --color-bg-button-active: #{$color-darker-violet};
+  --color-bg-button-disabled: #{$color-base-grey};
+  --color-bg-button-transparent: #{$color-opacity-violet};
 
   --color-bd-secondary: #{$color-magnolia};
   --color-bd-text: #{$color-base-violet};
 
   --color-icon-basic: #{$color-black};
   --color-icon-hover: #{$color-base-violet};
+  --color-icon-disabled: #{$color-base-grey};
 }
