@@ -1,0 +1,22 @@
+@use "../global/forward" as *;
+
+.main-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-index__features {
+  width: $width-phone - 2 * $padding-page-phone;
+  margin-inline: $padding-page-phone;
+
+  @include media-tablet {
+    width: $width-tablet - 2 * $padding-page-tablet;
+    margin-inline: $padding-page-tablet;
+  }
+
+  @include media-desktop {
+    width: $width-desktop - 2 * $padding-page-desktop;
+    margin-inline: $padding-page-desktop;
+  }
+}

@@ -1,0 +1,12 @@
+@use "../global/forward" as *;
+
+.heading {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+
+  @include media-tablet {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}

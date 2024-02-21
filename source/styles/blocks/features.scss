@@ -1,0 +1,121 @@
+@use "../global/forward" as *;
+
+.features {
+  padding-block: 50px 60px;
+  text-align: center;
+
+  @include media-tablet {
+    padding: 60px 10px 100px;
+  }
+
+  @include media-desktop {
+    padding: 100px 0 120px;
+  }
+}
+
+.features__badge {
+  margin-block: 0 4px;
+}
+
+.features__heading {
+  margin-block: 0 36px;
+
+  @include media-tablet {
+    margin-bottom: 60px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 80px;
+  }
+}
+
+.features__list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
+  @include media-tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 30px;
+  }
+
+  @include media-desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.features__item {
+  @include media-tablet {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 20px;
+    text-align: left;
+  }
+
+  @include media-desktop {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+    margin: 0 auto 10px;
+    background: center / cover;
+
+    @include media-tablet {
+      grid-row: span 2;
+    }
+
+    @include media-desktop {
+      margin-bottom: 10px;
+    }
+  }
+
+  &--icon_clock::before {
+    background-image: url("../../images/icons/stack.svg#feature-clock");
+  }
+
+  &--icon_pocket::before {
+    background-image: url("../../images/icons/stack.svg#feature-pocket");
+  }
+
+  &--icon_lightning::before {
+    background-image: url("../../images/icons/stack.svg#feature-lightning");
+  }
+
+  &--icon_leaf::before {
+    background-image: url("../../images/icons/stack.svg#feature-leaf");
+  }
+}
+
+.features__subheading {
+  margin-block: 0 4px;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+
+  @include media-tablet {
+    grid-column: 2;
+    margin: 0;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.features__description {
+  margin-block: 0;
+
+  @include media-tablet {
+    grid-column: 2;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
