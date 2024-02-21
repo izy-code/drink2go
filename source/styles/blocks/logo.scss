@@ -5,6 +5,17 @@
   align-items: center;
   text-decoration: none;
   gap: 20px;
+
+  &:hover,
+  &:focus-visible {
+    @include media-hover {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .logo__icon {
