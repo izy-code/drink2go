@@ -27,6 +27,7 @@ $color-transparent-violet: #{transparentize($color-base-violet, 0.75)};
   --color-font-basic: #{$color-black};
   --color-font-secondary: #{$color-base-white};
   --color-font-selected: #{$color-base-violet};
+  --color-font-placeholder: #{$color-base-grey};
 
   --color-bg-basic: #{$color-base-white};
   --color-bg-secondary: #{$color-lightest-grey};
@@ -46,6 +47,9 @@ $color-transparent-violet: #{transparentize($color-base-violet, 0.75)};
   --color-bd-text: #{$color-base-violet};
   --color-bd-slider-handle: #{$color-lighter-violet};
   --color-bd-slider-handle-active: #{$color-base-violet};
+  --color-bd-input: #{$color-lighter-violet};
+  --color-bd-focus: #{$color-darker-violet};
+  --color-bd-disabled: #{$color-light-grey};
 
   --color-icon-basic: #{$color-black};
   --color-icon-hover: #{$color-base-violet};
