@@ -13,15 +13,13 @@
 
 .main-index__features {
   width: $width-phone - 2 * $padding-page-phone;
-  margin-inline: $padding-page-phone;
+  margin-inline: auto;
 
   @include media-tablet {
     width: $width-tablet - 2 * $padding-page-tablet;
-    margin-inline: $padding-page-tablet;
   }
 
   @include media-desktop {
     width: $width-desktop - 2 * $padding-page-desktop;
-    margin-inline: $padding-page-desktop;
   }
 }
