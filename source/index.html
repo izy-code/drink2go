@@ -60,6 +60,9 @@
       <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go</h1>
       <section class="main-index__hero hero" data-test="hero">
         <div class="hero__slider slider">
+          <button class="slider__btn slider__btn--prev slider-button-prev" type="button" disabled>
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
           <ol class="slider__list">
             <li class="slider__slide slide slide--first slide--current">
               <div class="slider__text-container">
@@ -167,9 +170,6 @@
               </div>
             </li>
           </ol>
-          <button class="slider__btn slider__btn--prev slider-button-prev" type="button">
-            <span class="visually-hidden">Предыдущий слайд</span>
-          </button>
           <button class="slider__btn slider__btn--next slider-button-next" type="button">
             <span class="visually-hidden">Следующий слайд</span>
           </button>
@@ -222,7 +222,7 @@
         <form class="catalog__form form" id="catalog-form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="form__fieldset form__fieldset--price">
             <legend class="form__legend">Цена</legend>
-            <div class="form__range-slider"></div>
+            <div class="form__range-slider range-slider"></div>
             <div class="form__price-inputs">
               <label class="form__label form__label--price">
                 <span class="visually-hidden">От</span>

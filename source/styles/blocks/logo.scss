@@ -6,6 +6,10 @@
   text-decoration: none;
   gap: 20px;
 
+  @include media-desktop {
+    outline-offset: -1px;
+  }
+
   &:hover,
   &:focus-visible {
     @include media-hover {

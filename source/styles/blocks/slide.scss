@@ -6,6 +6,7 @@
   justify-items: center;
   padding: 20px 0 60px;
   text-align: center;
+  width: 100%;
 
   @include media-tablet {
     grid-template-columns: 1fr calc($width-tablet - 2 * var(--width-button-slider-tablet)) 1fr;

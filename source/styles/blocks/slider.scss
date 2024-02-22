@@ -2,26 +2,18 @@
 
 .slider {
   display: grid;
-  grid-template-columns: $padding-page-phone 1fr $width-phone - 2 * $padding-page-phone 1fr $padding-page-phone;
+  grid-template-columns: $padding-page-phone 1fr $padding-page-phone;
 
   @include media-tablet {
     --width-button-slider-tablet: 80px;
 
-    grid-template-columns:
-      var(--width-button-slider-tablet) 1fr calc($width-tablet - 2 * var(--width-button-slider-tablet))
-      1fr var(--width-button-slider-tablet);
-  }
-
-  @include media-desktop {
-    grid-template-columns:
-      var(--width-button-slider-tablet) 1fr calc($width-desktop - 2 * var(--width-button-slider-tablet))
-      1fr var(--width-button-slider-tablet);
+    grid-template-columns: var(--width-button-slider-tablet) 1fr var(--width-button-slider-tablet);
   }
 
   @include media-max {
     grid-template-columns:
-      1fr var(--width-button-slider-tablet) calc(0.5 * ($width-max - $width-desktop))
-      calc($width-desktop - 2 * var(--width-button-slider-tablet)) calc(0.5 * ($width-max - $width-desktop))
+      1fr var(--width-button-slider-tablet)
+      calc($width-max - 2 * var(--width-button-slider-tablet))
       var(--width-button-slider-tablet) 1fr;
   }
 }
@@ -29,14 +21,14 @@
 .slider__list {
   @include list-reset;
 
-  grid-area: 1 / 1 / 2 / 6;
+  grid-area: 1 / 1 / 2 / 4;
 
   @include media-desktop {
-    grid-area: 1 / 1 / 3 / 6;
+    grid-area: 1 / 1 / 3 / 4;
   }
 
   @include media-max {
-    grid-area: 1 / 1 / 3 / 8;
+    grid-area: 1 / 1 / 3 / 6;
   }
 }
 
@@ -46,16 +38,19 @@
 }
 
 .slider__btn {
+  z-index: 1;
   display: flex;
   width: $padding-page-phone;
   height: 100%;
   padding: 0;
   background-color: transparent;
   border: none;
+  outline-offset: -1px;
   cursor: pointer;
 
   @include media-tablet {
     width: var(--width-button-slider-tablet);
+    outline-offset: -2px;
   }
 
   &::before {
@@ -80,14 +75,14 @@
   }
 
   &--next {
-    grid-area: 1 / 5 / 2 / 6;
+    grid-area: 1 / 3 / 2 / 4;
 
     @include media-desktop {
-      grid-area: 1 / 5 / 3 / 6;
+      grid-area: 1 / 3 / 3 / 4;
     }
 
     @include media-max {
-      grid-area: 1 / 6 / 3 / 7;
+      grid-area: 1 / 4 / 3 / 5;
     }
   }
 
@@ -136,15 +131,16 @@
   @include media-desktop {
     @include list-reset;
 
-    grid-area: 2 / 3 / 3 / 4;
+    grid-area: 2 / 2 / 3 / 3;
     justify-self: center;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    max-width: calc($width-desktop - 2 * var(--width-button-slider-tablet));
     margin-bottom: 60px;
 
     @include media-max {
-      grid-area: 2 / 4 / 3 / 5;
+      grid-area: 2 / 3 / 3 / 4;
     }
   }
 }
