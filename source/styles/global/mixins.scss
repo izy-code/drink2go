@@ -30,6 +30,12 @@
   }
 }
 
+@mixin media-max {
+  @media (min-width: $width-max) {
+    @content;
+  }
+}
+
 @mixin media-hover {
   @media (hover: hover) {
     @content;
