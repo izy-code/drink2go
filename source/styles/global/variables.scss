@@ -29,6 +29,7 @@ $color-transparent-violet: #{transparentize($color-base-violet, 0.75)};
   --color-font-selected: #{$color-base-violet};
 
   --color-bg-basic: #{$color-base-white};
+  --color-bg-secondary: #{$color-lightest-grey};
   --color-bg-link: #{$color-magnolia};
   --color-bg-first-slide: #{$color-flat-white};
   --color-bg-second-slide: #{$color-lavender};

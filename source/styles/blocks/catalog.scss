@@ -1,0 +1,32 @@
+@use "../global/forward" as *;
+
+.catalog {
+  padding-block: 50px 44px;
+  padding-inline: calc(50vw - 0.5 * $width-phone + $padding-page-phone);
+  background-color: var(--color-bg-secondary);
+  text-align: center;
+
+  @media (max-width: $width-phone - 1px) {
+    padding-inline: calc(50% - 0.5 * $width-phone + $padding-page-phone);
+  }
+}
+
+.catalog__badge {
+  margin-block: 0 4px;
+}
+
+.catalog__heading {
+  margin-block: 0 20px;
+}
+
+.catalog__form {
+  margin-bottom: 40px;
+}
+
+.catalog__select {
+  margin-bottom: 16px;
+}
+
+.catalog__list {
+  margin-bottom: 40px;
+}
