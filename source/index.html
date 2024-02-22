@@ -224,15 +224,15 @@
             <legend class="form__legend">Цена</legend>
             <div class="form__range-slider range-slider"></div>
             <div class="form__price-inputs">
-              <label class="form__label form__label--price">
+              <label class="form__label form__label--price form__label--min-price">
                 <span class="visually-hidden">От</span>
-                <input class="form__input form__input--min-price" type="number" name="min-price" min="0" max="1000"
+                <input class="form__input form__input--min-price" type="number" name="min-price" min="0" max="975"
                   placeholder="0">
               </label>
               <label class="form__label form__label--price">
                 <span class="visually-hidden">До</span>
-                <input class="form__input form__input--max-price" type="number" name="max-price" min="0" max="1000"
-                  value="900" placeholder="1000">
+                <input class="form__input form__input--max-price" type="number" name="max-price" min="0" max="975"
+                  value="900" placeholder="975">
               </label>
             </div>
           </fieldset>
@@ -309,9 +309,9 @@
           <span class="catalog__select-text">Сортировка:</span>
           <select class="catalog__select" form="catalog-form" name="sorting">
             <option class="catalog__option" value="default" selected>по умолчанию</option>
-            <option class="catalog__option" value="popular">по популярности</option>
-            <option class="catalog__option" value="cheap">по возрастанию цены</option>
-            <option class="catalog__option" value="expensive">по убыванию цены</option>
+            <option class="catalog__option" value="popularity">по популярности</option>
+            <option class="catalog__option" value="ascending-price">по возрастанию цены</option>
+            <option class="catalog__option" value="descending-price">по убыванию цены</option>
           </select>
         </label>
         <ul class="catalog__list">
