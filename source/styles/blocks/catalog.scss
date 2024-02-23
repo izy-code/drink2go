@@ -79,5 +79,90 @@
 }
 
 .catalog__list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
   margin-bottom: 40px;
+}
+
+.catalog__item:hover {
+  @include media-hover {
+    box-shadow: 0 5px 15px 0 var(--color-card-shadow);
+  }
+}
+
+.catalog__pagination {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.catalog__pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  max-width: 180px;
+  min-height: 40px;
+  padding: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+
+  &--prev::before,
+  &--next::before {
+    content: "";
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    mask: url("../../images/icons/stack.svg#arrow-pagination") center / contain no-repeat;
+    background-color: var(--color-icon-hover);
+  }
+
+  &--next::before {
+    transform: rotate(180deg);
+  }
+
+  &--current {
+    font-weight: 600;
+  }
+
+
+  &--prev:hover:not(:disabled)::before,
+  &--next:hover:not(:disabled)::before,
+  &--prev:focus-visible:not(:disabled)::before,
+  &--next:focus-visible:not(:disabled)::before {
+    @include media-hover {
+      background-color: var(--color-bg-basic);
+    }
+  }
+
+  &--prev:active:not(:disabled)::before,
+  &--next:active:not(:disabled)::before {
+    background-color: var(--color-bg-basic);
+  }
+
+  &--prev:disabled::before,
+  &--next:disabled::before {
+    background-color: var(--color-bg-basic);
+  }
+}
+
+.catalog__pagination-text {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
 }

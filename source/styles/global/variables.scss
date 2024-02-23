@@ -20,6 +20,7 @@ $color-base-violet: #7859cf;
 $color-lighter-violet: #9070ec;
 $color-darker-violet: #593cac;
 $color-transparent-violet: #{transparentize($color-base-violet, 0.75)};
+$color-transparent-black: rgba(0, 0, 0, 0.15);
 
 :root {
   --font-primary: "Montserrat", "Arial", sans-serif;
@@ -55,4 +56,6 @@ $color-transparent-violet: #{transparentize($color-base-violet, 0.75)};
   --color-icon-basic: #{$color-black};
   --color-icon-hover: #{$color-base-violet};
   --color-icon-disabled: #{$color-base-grey};
+
+  --color-card-shadow: #{$color-transparent-black};
 }
