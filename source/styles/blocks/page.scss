@@ -20,7 +20,8 @@
   background-color: var(--color-bg-basic);
 }
 
-.page__header {
+.page__header,
+.page__footer {
   width: $width-phone - 2 * $padding-page-phone;
   margin-inline: auto;
 

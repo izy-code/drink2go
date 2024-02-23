@@ -3,6 +3,7 @@
 .card {
   display: grid;
   grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto 1fr;
   place-items: center;
   gap: 4px 25px;
   padding: 40px 20px 20px;
@@ -51,6 +52,7 @@
 
 .card__description {
   grid-column: span 2;
+  align-self: start;
   margin-block: 0 12px;
 
   @include media-tablet {
