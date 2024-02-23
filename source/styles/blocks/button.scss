@@ -21,6 +21,22 @@
     color: var(--color-font-selected);
   }
 
+  &--icon {
+    gap: 6px;
+
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      width: 20px;
+      height: 16px;
+      background: center / contain no-repeat;
+    }
+  }
+
+  &--icon_cart::before {
+    background-image: url("../../images/icons/stack.svg#cart-add");
+  }
+
   &:hover:not(:disabled),
   &:focus-visible:not(:disabled) {
     @include media-hover {
