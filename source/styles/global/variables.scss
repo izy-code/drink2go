@@ -42,6 +42,7 @@ $color-transparent-violet: #{transparentize($color-base-violet, 0.75)};
   --color-bg-button-active: #{$color-darker-violet};
   --color-bg-button-disabled: #{$color-base-grey};
   --color-bg-button-transparent: #{$color-transparent-violet};
+  --color-bg-checkbox: #{$color-base-grey};
 
   --color-bd-basic: #{$color-base-grey};
   --color-bd-secondary: #{$color-magnolia};

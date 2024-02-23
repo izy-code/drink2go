@@ -1,0 +1,80 @@
+@use "../global/forward" as *;
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: -4px;
+  padding: 4px;
+}
+
+.checkbox__input {
+  flex-shrink: 0;
+  width: 42px;
+  height: 24px;
+  margin: 0;
+  margin-right: 10px;
+
+  background-color: var(--color-bg-checkbox);
+  border: 2px solid var(--color-bd-basic);
+  border-radius: 12px;
+  appearance: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-bg-basic);
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .checkbox:hover &:not(:disabled) {
+    @include media-hover {
+      border-color: var(--color-bd-light-accent);
+      background-color: var(--color-bg-button-transparent);
+    }
+  }
+
+  &:checked {
+    border-color: var(--color-bd-accent);
+    background-color: var(--color-bg-button);
+
+    &::before {
+      transform: translateX(18px);
+    }
+  }
+
+  &:focus-visible {
+    border-color: var(--color-bd-light-accent);
+    background-color: var(--color-bg-button-transparent);
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: initial;
+    border-color: var(--color-bd-disabled);
+    background-color: var(--color-bd-disabled);
+
+    &::before {
+      background-color: var(--color-bg-secondary);
+    }
+
+    &:checked::before {
+      background-color: var(--color-bg-button-disabled);
+    }
+
+    & + .checkbox__text {
+      cursor: initial;
+      color: var(--color-font-placeholder);
+    }
+  }
+}
+
+.checkbox__text {
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
