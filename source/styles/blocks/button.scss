@@ -2,8 +2,12 @@
 
 .button {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding: 8px 20px;
+  font-family: var(--font-primary);
   font-size: 16px;
+  text-align: center;
   line-height: 24px;
   text-decoration: none;
   background-color: var(--color-bg-button);
@@ -12,19 +16,31 @@
   color: var(--color-font-secondary);
   cursor: pointer;
 
+  &--secondary {
+    background-color: var(--color-bg-basic);
+    color: var(--color-font-selected);
+  }
+
   &:hover:not(:disabled),
   &:focus-visible:not(:disabled) {
     @include media-hover {
       background-color: var(--color-bg-button-hover);
+      color: var(--color-font-secondary);
     }
   }
 
   &:active:not(:disabled) {
     background-color: var(--color-bg-button-active);
+    color: var(--color-font-secondary);
   }
 
   &:disabled {
     background-color: var(--color-bg-button-disabled);
     cursor: default;
+  }
+
+  &--secondary:disabled {
+    background-color: var(--color-bg-button-disabled-secondary);
+    color: var(--color-font-secondary);
   }
 }
