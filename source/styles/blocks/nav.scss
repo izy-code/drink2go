@@ -111,7 +111,7 @@
   }
 
   &:active:not(.nav__link--current) {
-    background-color: var(--color-bg-link);
+    background-color: var(--color-bg-focus);
 
     @include media-tablet {
       color: var(--color-font-selected);
@@ -193,7 +193,7 @@
   }
 
   &:active {
-    background-color: var(--color-bg-link);
+    background-color: var(--color-bg-focus);
 
     &::before {
       @include media-hover {

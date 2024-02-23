@@ -56,29 +56,26 @@
   cursor: pointer;
   appearance: none;
 
-  &:hover:not(:disabled) {
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
     @include media-hover {
       background-color: var(--color-bg-focus);
+      background-image: url("../../images/icons/stack.svg#arrow-down");
       outline: none;
     }
   }
 
-  &:focus-visible:not(:disabled) {
-    background-color: var(--color-bg-focus);
-    outline: none;
-  }
-
   &:active:not(:disabled) {
-    background-color: var(--color-bg-basic);
+    background-color: var(--color-bg-secondary);
     background-image: url("../../images/icons/stack.svg#arrow-up");
   }
-}
 
-.catalog__select:disabled {
-  color: var(--color-font-basic);
-  border-color: var(--color-brdr-basic);
-  opacity: 0.3;
-  cursor: initial;
+  &:disabled {
+    color: var(--color-font-placeholder);
+    border-color: var(--color-bd-disabled);
+    background-image: url("../../images/icons/stack.svg#arrow-disabled");
+    cursor: initial;
+  }
 }
 
 .catalog__list {
