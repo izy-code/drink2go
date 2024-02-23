@@ -53,4 +53,3 @@ const addSliderHandlers = () => {
 };
 
 export { addSliderHandlers };
-
