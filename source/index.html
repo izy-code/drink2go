@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Drink2Go</title>
-    <link rel="preload" href="fonts/montserrat-400.woff2" as="font" crossorigin>
-    <link rel="preload" href="fonts/montserrat-500.woff2" as="font" crossorigin>
-    <link rel="preload" href="fonts/montserrat-600.woff2" as="font" crossorigin>
-    <link rel="preload" href="fonts/montserrat-700.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/montserrat-400.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-500.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-600.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-700.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="vendor/nouislider/nouislider.css">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="vendor/nouislider/nouislider.js" defer></script>
-    <script src="scripts/index.js" type="module" defer></script>
   </head>
   <body class="page__body">
     <header class="page__header header" data-test="header">
       <a class="header__logo logo" href="index.html" aria-current="page">
         <picture>
-          <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
-          <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="82" height="36">
+          <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170"
+            height="36">
+          <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="82"
+            height="36">
           <img class="logo__icon" src="images/logo-phone.svg" width="32" height="36" alt="Логотип Drink2Go.">
         </picture>
         <span class="logo__text">Интернет-магазин кофейных напитков</span>
@@ -87,10 +88,10 @@
                   <source type="image/webp"
                     srcset="images/slides/slide-flat-white-phone@1x.webp, images/slides/slide-flat-white-phone@2x.webp 2x"
                     width="280" height="280">
-                  <source media="(min-width: 1440px)"
+                  <source type="image/png" media="(min-width: 1440px)"
                     srcset="images/slides/slide-flat-white-desktop@1x.png, images/slides/slide-flat-white-desktop@2x.png 2x"
                     width="600" height="600">
-                  <source media="(min-width: 768px)"
+                  <source type="image/png" media="(min-width: 768px)"
                     srcset="images/slides/slide-flat-white-tablet@1x.png, images/slides/slide-flat-white-tablet@2x.png 2x"
                     width="476" height="476">
                   <img class="slide__image" src="images/slides/slide-flat-white-phone@1x.png"
@@ -122,10 +123,10 @@
                   <source type="image/webp"
                     srcset="images/slides/slide-lavender-phone@1x.webp, images/slides/slide-lavender-phone@2x.webp 2x"
                     width="280" height="280">
-                  <source media="(min-width: 1440px)"
+                  <source type="image/png" media="(min-width: 1440px)"
                     srcset="images/slides/slide-lavender-desktop@1x.png, images/slides/slide-lavender-desktop@2x.png 2x"
                     width="600" height="600">
-                  <source media="(min-width: 768px)"
+                  <source type="image/png" media="(min-width: 768px)"
                     srcset="images/slides/slide-lavender-tablet@1x.png, images/slides/slide-lavender-tablet@2x.png 2x"
                     width="476" height="476">
                   <img class="slide__image" src="images/slides/slide-lavender-phone@1x.png"
@@ -157,10 +158,10 @@
                   <source type="image/webp"
                     srcset="images/slides/slide-espresso-phone@1x.webp, images/slides/slide-espresso-phone@2x.webp 2x"
                     width="280" height="280">
-                  <source media="(min-width: 1440px)"
+                  <source type="image/png" media="(min-width: 1440px)"
                     srcset="images/slides/slide-espresso-desktop@1x.png, images/slides/slide-espresso-desktop@2x.png 2x"
                     width="600" height="600">
-                  <source media="(min-width: 768px)"
+                  <source type="image/png" media="(min-width: 768px)"
                     srcset="images/slides/slide-espresso-tablet@1x.png, images/slides/slide-espresso-tablet@2x.png 2x"
                     width="476" height="476">
                   <img class="slide__image" src="images/slides/slide-espresso-phone@1x.png"
@@ -305,15 +306,15 @@
             <button class="form__button button button--secondary" type="reset">Сбросить</button>
           </div>
         </form>
-        <label class="catalog__select-label">
-          <span class="catalog__select-text">Сортировка:</span>
-          <select class="catalog__select" form="catalog-form" name="sorting">
+        <div class="catalog__select-container">
+          <label class="catalog__select-label" for="sort-select">Сортировка:</label>
+          <select class="catalog__select" id="sort-select" form="catalog-form" name="sorting">
             <option class="catalog__option" value="default" selected>по умолчанию</option>
             <option class="catalog__option" value="ascending-price">по цене</option>
             <option class="catalog__option" value="availability">по наличию</option>
             <option class="catalog__option" value="novelty">по новинкам</option>
           </select>
-        </label>
+        </div>
         <ul class="catalog__list">
           <li class="catalog__item card">
             <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -412,7 +413,7 @@
             <button class="card__button button button--icon button--icon_cart" type="button">В корзину</button>
           </li>
         </ul>
-        <ol class="catalog__pagination" aria-label="Постраничное разделение каталога">
+        <ol class="catalog__pagination">
           <li class="catalog__pagination-item">
             <button class="catalog__pagination-btn catalog__pagination-btn--prev button button--secondary"
               type="button"><span class="catalog__pagination-text">Назад</span></button>
@@ -442,14 +443,56 @@
             srcset="images/map-tablet@1x.webp, images/map-tablet@2x.webp 2x" width="768" height="480">
           <source type="image/webp" srcset="images/map-phone@1x.webp, images/map-phone@2x.webp 2x" width="320"
             height="420">
-          <source media="(min-width: 1080px)" srcset="images/map-desktop@1x.png, images/map-desktop@2x.png 2x"
-            width="1440" height="540">
-          <source media="(min-width: 400px)" srcset="images/map-tablet@1x.png, images/map-tablet@2x.png 2x" width="768"
-            height="480">
+          <source type="image/png" media="(min-width: 1080px)"
+            srcset="images/map-desktop@1x.png, images/map-desktop@2x.png 2x" width="1440" height="540">
+          <source type="image/png" media="(min-width: 400px)"
+            srcset="images/map-tablet@1x.png, images/map-tablet@2x.png 2x" width="768" height="480">
           <img class="map__image" src="images/map-phone@1x.png" srcset="images/map-phone@2x.png 2x" width="320"
             height="420" alt="Карта с адресом: Санкт-Петербург, набережная реки Карповки, дом 5">
         </picture>
       </section>
     </main>
+
+    <footer class="page__footer footer" data-test="footer">
+      <section class="footer__socials socials">
+        <h2 class="visually-hidden">Наши профили в соцсетях</h2>
+        <div class="footer__logo logo">
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170"
+              height="36">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="82"
+              height="36">
+            <img class="logo__icon" src="images/logo-phone.svg" width="32" height="36" alt="Логотип Drink2Go.">
+          </picture>
+          <span class="logo__text">Интернет-магазин кофейных напитков</span>
+        </div>
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--icon_vk" href="#">
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--icon_pinterest" href="#">
+              <span class="visually-hidden" lang="en">Pinterest</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--icon_ok" href="#">
+              <span class="visually-hidden">Одноклассники</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <ul>
+        <li>
+          <h2>first</h2>
+        </li>
+        <li>
+          <h2>Second</h2>
+        <li>
+      </ul>
+    </footer>
+    <script src="scripts/index.js" type="module"></script>
   </body>
 </html>
