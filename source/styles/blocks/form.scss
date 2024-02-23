@@ -5,12 +5,29 @@
   flex-direction: column;
   row-gap: 30px;
   text-align: left;
+
+  @include media-tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+  }
+
+  @include media-desktop {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 
 .form__fieldset {
   margin: 0;
   padding: 0;
   border: none;
+
+  &--milk {
+    @include media-tablet {
+      min-width: 222px;
+    }
+  }
 }
 
 .form__legend {
@@ -23,6 +40,14 @@
 
 .form__range-slider {
   margin-block: 11px 35px;
+
+  @include media-tablet {
+    margin-bottom: 31px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 33px;
+  }
 }
 
 .form__price-inputs {
@@ -30,12 +55,25 @@
   gap: 18px;
   align-items: flex-end;
 
+  @include media-tablet {
+    gap: 20px;
+    align-items: center;
+  }
+
   &::before {
     content: "";
     width: 8px;
     height: 2px;
     margin-bottom: 18px;
     background-color: var(--color-bg-button-disabled);
+
+    @include media-tablet {
+      margin-bottom: 0;
+    }
+
+    @include media-desktop {
+      width: 10px;
+    }
   }
 }
 
@@ -55,6 +93,22 @@
   color: var(--color-font-basic);
   border: 2px solid var(--color-bd-light-accent);
   border-radius: 4px;
+
+  @include media-tablet {
+    width: 87px;
+
+    &--max-price {
+      width: 88px;
+    }
+  }
+
+  @include media-desktop {
+    width: 134px;
+
+    &--max-price {
+      width: 134px;
+    }
+  }
 
   &:focus {
     border-color: var(--color-bd-focus);
@@ -84,4 +138,23 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  order: 10;
+
+  @include media-tablet {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  @include media-desktop {
+    justify-content: stretch;
+    margin-top: 10px;
+  }
+}
+
+.form__button {
+  @include media-desktop {
+    flex: 1 1 0;
+  }
 }

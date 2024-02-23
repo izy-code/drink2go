@@ -7,24 +7,43 @@
   text-align: center;
 
   @include media-tablet {
+    padding-block: 80px 90px;
     padding-inline: calc(50% - 0.5 * $width-tablet + $padding-page-tablet);
   }
 
   @include media-desktop {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: 30px;
+    padding-block: 100px 120px;
     padding-inline: calc(50% - 0.5 * $width-desktop + $padding-page-desktop);
   }
 }
 
 .catalog__badge {
   margin-block: 0 4px;
+
+  @include media-desktop {
+    grid-column: span 2;
+  }
 }
 
 .catalog__heading {
   margin-block: 0 20px;
+
+  @include media-desktop {
+    grid-column: span 2;
+    margin-bottom: 40px;
+  }
 }
 
 .catalog__form {
   margin-bottom: 40px;
+
+  @include media-desktop {
+    grid-row: span 3;
+    grid-column: 1 / 2;
+  }
 }
 
 .catalog__select-label {
@@ -34,6 +53,16 @@
   gap: 8px;
   margin-bottom: 16px;
   padding-left: 3px;
+
+  @include media-tablet {
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+
+  @include media-desktop {
+    margin-top: -4px;
+  }
 }
 
 .catalog__select-text {
@@ -55,6 +84,11 @@
   color: var(--color-font-selected);
   cursor: pointer;
   appearance: none;
+
+  @include media-tablet {
+    width: 165px;
+    background-position: right 10px center;
+  }
 
   &:hover:not(:disabled),
   &:focus-visible:not(:disabled) {
@@ -85,11 +119,32 @@
   flex-direction: column;
   row-gap: 20px;
   margin-bottom: 40px;
+
+  @include media-tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+
+  @include media-desktop {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 60px;
+    margin-right: 1px;
+  }
 }
 
-.catalog__item:hover {
-  @include media-hover {
-    box-shadow: 0 5px 15px 0 var(--color-card-shadow);
+.catalog__item {
+  &:hover {
+    @include media-hover {
+      box-shadow: 0 5px 15px 0 var(--color-card-shadow);
+    }
+  }
+
+  @include media-desktop {
+    &:nth-child(2) {
+      box-shadow: 0 5px 15px 0 var(--color-card-shadow);
+    }
   }
 }
 
@@ -100,6 +155,10 @@
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
+
+  @include media-tablet {
+    justify-content: flex-end;
+  }
 }
 
 .catalog__pagination-btn {
@@ -123,6 +182,10 @@
     margin: auto;
     mask: url("../../images/icons/stack.svg#arrow-pagination") center / contain no-repeat;
     background-color: var(--color-icon-hover);
+
+    @include media-tablet {
+      display: none;
+    }
   }
 
   &--next::before {
@@ -165,4 +228,20 @@
   padding: 0;
   white-space: nowrap;
   border: 0;
+
+  @include media-tablet {
+    position: static;
+    overflow: visible;
+    clip: unset;
+    clip-path: none;
+    width: unset;
+    height: unset;
+    margin: 0;
+    padding-inline: 12px;
+    white-space: normal;
+    border: none;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
 }
