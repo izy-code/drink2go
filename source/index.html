@@ -432,6 +432,24 @@
           </li>
         </ol>
       </section>
+
+      <section class="main-index__map map" data-test="map">
+        <h2 class="visually-hidden">Наше расположение на карте</h2>
+        <picture>
+          <source type="image/webp" media="(min-width: 1080px)"
+            srcset="images/map-desktop@1x.webp, images/map-desktop@2x.webp 2x" width="1440" height="540">
+          <source type="image/webp" media="(min-width: 400px)"
+            srcset="images/map-tablet@1x.webp, images/map-tablet@2x.webp 2x" width="768" height="480">
+          <source type="image/webp" srcset="images/map-phone@1x.webp, images/map-phone@2x.webp 2x" width="320"
+            height="420">
+          <source media="(min-width: 1080px)" srcset="images/map-desktop@1x.png, images/map-desktop@2x.png 2x"
+            width="1440" height="540">
+          <source media="(min-width: 400px)" srcset="images/map-tablet@1x.png, images/map-tablet@2x.png 2x" width="768"
+            height="480">
+          <img class="map__image" src="images/map-phone@1x.png" srcset="images/map-phone@2x.png 2x" width="320"
+            height="420" alt="Карта с адресом: Санкт-Петербург, набережная реки Карповки, дом 5">
+        </picture>
+      </section>
     </main>
   </body>
 </html>
