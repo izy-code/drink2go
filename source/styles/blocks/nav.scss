@@ -99,7 +99,7 @@
       display: block;
       width: calc(100% - var(--thickness-bd-text) + 40px);
       margin-left: calc(-20px + 0.5 * var(--thickness-bd-text));
-      box-shadow: 0 31px 0 calc(var(--thickness-bd-text) / 2) var(--color-bd-text);
+      box-shadow: 0 31px 0 calc(var(--thickness-bd-text) / 2) var(--color-bd-accent);
     }
   }
 

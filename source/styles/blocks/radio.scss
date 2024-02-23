@@ -1,0 +1,98 @@
+@use "../global/forward" as *;
+
+.radio {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: -4px;
+  padding: 4px;
+}
+
+.radio__input {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  margin-right: 10px;
+
+  background-color: var(--color-bg-basic);
+  border: 2px solid var(--color-bd-basic);
+  border-radius: 50%;
+  appearance: none;
+  cursor: pointer;
+
+  .radio:hover &:not(:disabled) {
+    @include media-hover {
+      border-color: var(--color-bd-light-accent);
+    }
+  }
+
+  .radio:hover &:not(:disabled)::before {
+    @include media-hover {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin-top: 50%;
+      margin-left: 50%;
+      background-color: var(--color-bg-button-transparent);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &:checked {
+    border-color: var(--color-bd-accent);
+  }
+
+  &:checked::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-top: 50%;
+    margin-left: 50%;
+    background-color: var(--color-bd-accent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:focus-visible {
+    @include media-hover {
+      border-color: var(--color-bd-light-accent);
+      outline: none;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-top: 50%;
+        margin-left: 50%;
+        background-color: var(--color-bg-button-transparent);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &:disabled {
+    cursor: initial;
+    border-color: var(--color-bd-disabled);
+
+    &::before {
+      background-color: var(--color-bd-disabled);
+    }
+
+    & + .radio__text {
+      cursor: initial;
+      color: var(--color-font-placeholder);
+    }
+  }
+}
+
+.radio__text {
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}

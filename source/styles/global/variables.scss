@@ -43,11 +43,10 @@ $color-transparent-violet: #{transparentize($color-base-violet, 0.75)};
   --color-bg-button-disabled: #{$color-base-grey};
   --color-bg-button-transparent: #{$color-transparent-violet};
 
+  --color-bd-basic: #{$color-base-grey};
   --color-bd-secondary: #{$color-magnolia};
-  --color-bd-text: #{$color-base-violet};
-  --color-bd-slider-handle: #{$color-lighter-violet};
-  --color-bd-slider-handle-active: #{$color-base-violet};
-  --color-bd-input: #{$color-lighter-violet};
+  --color-bd-accent: #{$color-base-violet};
+  --color-bd-light-accent: #{$color-lighter-violet};
   --color-bd-focus: #{$color-darker-violet};
   --color-bd-disabled: #{$color-light-grey};
 

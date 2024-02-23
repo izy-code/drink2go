@@ -28,13 +28,20 @@
   right: -12px;
   border-radius: 12px;
   border: none;
-  box-shadow: inset 0 0 0 2px var(--color-bd-slider-handle);
+  box-shadow: inset 0 0 0 2px var(--color-bd-light-accent);
   cursor: pointer;
 }
 
 .range-slider .noui-handle::before,
 .range-slider .noui-handle::after {
   display: none;
+}
+
+.range-slider .noui-handle:hover,
+.range-slider .noui-handle:focus-visible {
+  @include media-hover {
+    outline: none;
+  }
 }
 
 .range-slider .noui-handle:hover::before,
@@ -52,7 +59,7 @@
 }
 
 .range-slider .noui-handle:active {
-  box-shadow: inset 0 0 0 2px var(--color-bd-slider-handle-active);
+  box-shadow: inset 0 0 0 2px var(--color-bd-accent);
 
   &::before {
     content: "";
