@@ -5,9 +5,10 @@ const SLIDER_MIN_THUMB_START = 0;
 const SLIDER_MAX_THUMB_START = 900;
 const SLIDER_INIT_UPDATES_COUNT_MAX = 2;
 
-const sliderNode = document.querySelector('.form__range-slider');
-const minPriceInputNode = document.querySelector('.form__input--min-price');
-const maxPriceInputNode = document.querySelector('.form__input--max-price');
+const formNode = document.querySelector('.catalog__form');
+const sliderNode = formNode.querySelector('.form__range-slider');
+const minPriceInputNode = formNode.querySelector('.form__input--min-price');
+const maxPriceInputNode = formNode.querySelector('.form__input--max-price');
 
 let sliderUpdatesCount = 0;
 
@@ -39,6 +40,10 @@ const initRangeSlider = () => {
     } else {
       sliderUpdatesCount += 1;
     }
+  });
+
+  formNode.addEventListener('reset', () => {
+    sliderNode.noUiSlider.set([SLIDER_MIN_THUMB_START, SLIDER_MAX_THUMB_START]);
   });
 
   minPriceInputNode.addEventListener('change', onPriceInputValueChange);
