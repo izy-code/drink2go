@@ -2,20 +2,16 @@
 
 .catalog {
   padding-block: 50px 44px;
-  padding-inline: calc(50vw - 0.5 * $width-phone + $padding-page-phone);
+  padding-inline: calc(50% - 0.5 * $width-phone + $padding-page-phone);
   background-color: var(--color-bg-secondary);
   text-align: center;
 
-  @media (max-width: $width-phone - 1px) {
-    padding-inline: calc(50% - 0.5 * $width-phone + $padding-page-phone);
-  }
-
   @include media-tablet {
-    padding-inline: calc(50vw - 0.5 * $width-tablet + $padding-page-tablet);
+    padding-inline: calc(50% - 0.5 * $width-tablet + $padding-page-tablet);
   }
 
   @include media-desktop {
-    padding-inline: calc(50vw - 0.5 * $width-desktop + $padding-page-desktop);
+    padding-inline: calc(50% - 0.5 * $width-desktop + $padding-page-desktop);
   }
 }
 
@@ -31,8 +27,58 @@
   margin-bottom: 40px;
 }
 
-.catalog__select {
+.catalog__select-label {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 16px;
+  padding-left: 3px;
+}
+
+.catalog__select-text {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.catalog__select {
+  width: 162px;
+  padding: 4px 27px 4px 10px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  background: url("../../images/icons/stack.svg#arrow-down") right 7px center / 10px 10px no-repeat;
+  color: var(--color-font-selected);
+  cursor: pointer;
+  appearance: none;
+
+  &:hover:not(:disabled) {
+    @include media-hover {
+      background-color: var(--color-bg-focus);
+      outline: none;
+    }
+  }
+
+  &:focus-visible:not(:disabled) {
+    background-color: var(--color-bg-focus);
+    outline: none;
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--color-bg-basic);
+    background-image: url("../../images/icons/stack.svg#arrow-up");
+  }
+}
+
+.catalog__select:disabled {
+  color: var(--color-font-basic);
+  border-color: var(--color-brdr-basic);
+  opacity: 0.3;
+  cursor: initial;
 }
 
 .catalog__list {
