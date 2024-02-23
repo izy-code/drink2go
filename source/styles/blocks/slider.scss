@@ -13,7 +13,7 @@
   @include media-max {
     grid-template-columns:
       1fr var(--width-button-slider-tablet)
-      calc($width-max - 2 * var(--width-button-slider-tablet))
+      min(calc($width-max - 2 * var(--width-button-slider-tablet)), calc(100% - 2 * var(--width-button-slider-tablet)))
       var(--width-button-slider-tablet) 1fr;
   }
 }
