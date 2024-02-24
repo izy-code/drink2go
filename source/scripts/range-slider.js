@@ -31,6 +31,12 @@ const initRangeSlider = () => {
     },
   });
 
+  const minPriceHandle = sliderNode.querySelector('[data-handle="0"]');
+  const maxPriceHandle = sliderNode.querySelector('[data-handle="1"]');
+
+  minPriceHandle.setAttribute('aria-label', 'Ползунок минимальной цены');
+  maxPriceHandle.setAttribute('aria-label', 'Ползунок максимальной цены');
+
   sliderNode.noUiSlider.on('update', () => {
     const effectSliderValues = sliderNode.noUiSlider.get();
 
