@@ -1,0 +1,40 @@
+.academy {
+  display: flex;
+  column-gap: 3px;
+  font-size: 12px;
+  line-height: 16px;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-font-placeholder);
+}
+
+.academy__link {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  text-decoration: none;
+  color: var(--color-font-placeholder);
+
+  &:hover,
+  &:focus-visible {
+    @media (hover: hover) {
+      color: var(--color-font-selected);
+
+      & .academy__icon {
+        fill: var(--color-font-selected);
+      }
+    }
+  }
+
+  &:active {
+    color: var(--color-font-active);
+
+    & .academy__icon {
+      fill: var(--color-font-active);
+    }
+  }
+}
+
+.academy__icon {
+  fill: var(--color-icon-disabled);
+}

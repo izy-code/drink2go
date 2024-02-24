@@ -5,6 +5,14 @@
   line-height: 36px;
   font-weight: 700;
 
+  &--footer {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--color-font-selected);
+  }
+
   @include media-tablet {
     font-size: 42px;
     line-height: 64px;

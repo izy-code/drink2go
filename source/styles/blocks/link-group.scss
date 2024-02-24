@@ -1,0 +1,41 @@
+@use "../global/forward" as *;
+
+.link-group {
+  padding-block: 20px 22px;
+}
+
+.link-group__heading {
+  margin-block: 0 14px;
+}
+
+.link-group__list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.link-group__link {
+  display: block;
+  width: fit-content;
+  padding-block: 6px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-font-basic);
+
+  &:hover,
+  &:focus-visible {
+    @media (hover: hover) {
+      color: var(--color-font-focus);
+    }
+  }
+
+  &:active {
+    color: var(--color-font-active);
+  }
+}

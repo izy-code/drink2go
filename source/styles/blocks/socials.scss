@@ -1,0 +1,68 @@
+@use "../global/forward" as *;
+
+.socials {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.socials__logo {
+  margin-right: auto;
+}
+
+.socials__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 160px;
+}
+
+.socials__link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    background-color: var(--color-icon-disabled);
+    mask: center / contain no-repeat;
+  }
+
+  &--icon_vk::before {
+    mask-image: url("../../images/icons/stack.svg#socials-vk");
+  }
+
+  &--icon_pinterest::before {
+    width: 22px;
+    height: 22px;
+    mask-image: url("../../images/icons/stack.svg#socials-pinterest");
+  }
+
+  &--icon_ok::before {
+    mask-image: url("../../images/icons/stack.svg#socials-ok");
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-bg-focus);
+
+    &::before {
+      @media (hover: hover) {
+        background-color: var(--color-icon-hover);
+      }
+    }
+  }
+
+  &:active {
+    background-color: var(--color-bg-button-transparent);
+
+    &::before {
+      background-color: var(--color-icon-hover);
+    }
+  }
+}

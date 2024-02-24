@@ -20,13 +20,25 @@
   background-color: var(--color-bg-basic);
 }
 
-.page__header,
-.page__footer {
+.page__header {
   width: $width-phone - 2 * $padding-page-phone;
   margin-inline: auto;
 
   @include media-tablet {
     width: $width-tablet - 2 * $padding-page-tablet;
+  }
+
+  @include media-desktop {
+    width: $width-desktop - 2 * $padding-page-desktop;
+  }
+}
+
+.page__footer {
+  width: 100%;
+
+  @include media-tablet {
+    width: $width-tablet - 2 * $padding-page-tablet;
+    margin-inline: auto;
   }
 
   @include media-desktop {

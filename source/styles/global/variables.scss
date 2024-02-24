@@ -29,6 +29,8 @@ $color-transparent-black: rgba(0, 0, 0, 0.15);
   --color-font-secondary: #{$color-base-white};
   --color-font-selected: #{$color-base-violet};
   --color-font-placeholder: #{$color-base-grey};
+  --color-font-focus: #{$color-lighter-violet};
+  --color-font-active: #{$color-darker-violet};
 
   --color-bg-basic: #{$color-base-white};
   --color-bg-secondary: #{$color-lightest-grey};

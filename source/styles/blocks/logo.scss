@@ -13,14 +13,16 @@
   height: 36px;
   max-width: none;
 
+  .logo--footer & {
+    width: 82px;
+  }
+
   @include media-tablet {
     width: 82px;
-    height: 36px;
   }
 
   @include media-desktop {
     width: 170px;
-    height: 36px;
   }
 }
 
