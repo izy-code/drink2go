@@ -120,10 +120,21 @@
     background: var(--color-bg-secondary);
     border-color: var(--color-bd-disabled);
   }
-}
 
-.form__input::placeholder {
-  color: var(--color-font-placeholder);
+  &[type="number"] {
+    appearance: textfield;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+  }
+
+  &::placeholder {
+    color: var(--color-font-placeholder);
+    opacity: 1;
+  }
 }
 
 .form__list {
