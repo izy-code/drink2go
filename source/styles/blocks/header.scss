@@ -5,9 +5,13 @@
   display: flex;
   align-items: flex-start;
 
+  @include media-tablet {
+    column-gap: 20px;
+  }
+
   @include media-desktop {
     justify-content: space-between;
-    gap: 40px;
+    column-gap: 40px;
   }
 }
 
@@ -27,9 +31,10 @@
 .header__toggle {
   display: block;
   border: none;
-  width: 48px;
-  height: 48px;
-  margin: 6px -14px 6px 6px;
+  width: 52px;
+  height: 60px;
+  margin-inline: 4px -16px;
+  padding: 0;
   cursor: pointer;
   background: url("../../images/icons/stack.svg#burger") center / 16px 16px no-repeat;
 
