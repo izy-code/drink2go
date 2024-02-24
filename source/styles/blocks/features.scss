@@ -94,6 +94,17 @@
   &--icon_leaf::before {
     background-image: url("../../images/icons/stack.svg#feature-leaf");
   }
+
+  &--icon_clock::before,
+  &--icon_leaf::before {
+    @media (min-width: $width-tablet) {
+      margin-top: 4px;
+    }
+
+    @media (min-width: $width-desktop) {
+      margin-top: 0;
+    }
+  }
 }
 
 .features__subheading {
