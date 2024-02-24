@@ -8,9 +8,7 @@
     <link rel="preload" href="fonts/montserrat-500.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserrat-600.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserrat-700.woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="vendor/nouislider/nouislider.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="vendor/nouislider/nouislider.js" defer></script>
   </head>
   <body class="page__body">
     <header class="page__header header" data-test="header">
@@ -456,7 +454,7 @@
     <footer class="page__footer footer" data-test="footer">
       <section class="footer__socials socials">
         <h2 class="visually-hidden">Наши профили в соцсетях</h2>
-        <div class="footer__logo logo logo--footer">
+        <div class="socials__logo logo logo--footer">
           <picture>
             <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-desktop.svg" width="170"
               height="36">
@@ -525,13 +523,13 @@
         <a class="academy__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
           rel="noopener noreferrer">
           <span class="academy__title" lang="en">HTML Academy</span>
-          <svg class="academy__icon" width="27" height="34" role="img"
-            aria-label="Логотип HTML Academy, гербовый щит с академической шапочкой">
+          <svg class="academy__icon" width="27" height="34" role="img">
             <use href="images/logo-academy.svg" aria-hidden="true" />
           </svg>
         </a>
       </p>
     </footer>
+    <script src="vendor/nouislider.js" defer></script>
     <script src="scripts/index.js" type="module"></script>
   </body>
 </html>
