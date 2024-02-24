@@ -11,8 +11,8 @@
 
   @include media-desktop {
     flex-direction: column;
-    align-items: start;
     gap: 50px;
+    align-items: start;
     padding-block: 10px;
   }
 }

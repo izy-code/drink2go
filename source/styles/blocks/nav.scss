@@ -14,12 +14,28 @@
 
   display: none;
 
+  @include media-tablet {
+    position: static;
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    width: unset;
+    margin-inline: 12px 60px;
+    border-top: none;
+  }
+
+  @include media-desktop {
+    column-gap: 20px;
+    margin: 0;
+  }
+
   .nav--js-menu-opened & {
     @media (max-width: $width-tablet - 1px) {
-      z-index: 2;
       position: absolute;
       top: 100%;
       left: calc(-0.5 * (100vw - $width-phone) - $padding-page-phone);
+      z-index: 2;
       display: block;
       width: 100vw;
       background-color: var(--color-bg-basic);
@@ -30,22 +46,6 @@
       left: -$padding-page-phone;
       width: calc(100% + 2 * $padding-page-phone);
     }
-  }
-
-  @include media-tablet {
-    z-index: 0;
-    position: static;
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 8px;
-    width: unset;
-    margin-inline: 12px 60px;
-    border-top: none;
-  }
-
-  @include media-desktop {
-    margin: 0;
-    column-gap: 20px;
   }
 }
 
@@ -67,20 +67,20 @@
 .nav__link {
   display: block;
   width: 100%;
-  text-align: center;
   margin-inline: auto;
   padding: 16px 80px;
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
   color: var(--color-font-basic);
 
   @include media-tablet {
-    padding: 32px 16px;
     width: fit-content;
+    padding: 32px 16px;
   }
 
   @include media-desktop {
@@ -96,6 +96,7 @@
   &--current::after {
     @include media-tablet {
       --thickness-bd-text: 2px;
+
       content: "";
       display: block;
       width: calc(100% - var(--thickness-bd-text) + 40px);
@@ -134,8 +135,8 @@
   }
 
   @include media-desktop {
-    max-width: 412px;
     column-gap: 20px;
+    max-width: 412px;
   }
 }
 
@@ -149,14 +150,14 @@
 
 .nav__user-link {
   display: flex;
-  align-items: center;
   gap: 8px;
+  align-items: center;
   width: 52px;
   height: 60px;
-  cursor: pointer;
+  letter-spacing: 0.02em;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  cursor: pointer;
 
   @include media-tablet {
     height: 80px;
@@ -174,8 +175,8 @@
     width: 16px;
     height: 16px;
     margin: auto;
-    mask: center / contain no-repeat;
     background-color: var(--color-icon-basic);
+    mask: center / contain no-repeat;
   }
 
   &--login::before {
@@ -224,12 +225,12 @@
     width: unset;
     height: unset;
     margin: 0;
-    white-space: normal;
-    border: none;
     font-size: 12px;
     line-height: 16px;
     font-weight: 500;
+    white-space: normal;
     color: var(--color-font-basic);
+    border: none;
   }
 
   .nav__user-link:hover &,

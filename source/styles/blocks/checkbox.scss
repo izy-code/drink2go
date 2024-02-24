@@ -14,12 +14,11 @@
   height: 24px;
   margin: 0;
   margin-right: 10px;
-
   background-color: var(--color-bg-checkbox);
   border: 2px solid var(--color-bd-basic);
   border-radius: 12px;
-  appearance: none;
   cursor: pointer;
+  appearance: none;
 
   &::before {
     content: "";
@@ -33,14 +32,14 @@
 
   .checkbox:hover &:not(:disabled) {
     @include media-hover {
-      border-color: var(--color-bd-light-accent);
       background-color: var(--color-bg-button-transparent);
+      border-color: var(--color-bd-light-accent);
     }
   }
 
   &:checked {
-    border-color: var(--color-bd-accent);
     background-color: var(--color-bg-button);
+    border-color: var(--color-bd-accent);
 
     &::before {
       transform: translateX(18px);
@@ -48,15 +47,15 @@
   }
 
   &:focus-visible {
-    border-color: var(--color-bd-light-accent);
     background-color: var(--color-bg-button-transparent);
+    border-color: var(--color-bd-light-accent);
     outline: none;
   }
 
   &:disabled {
-    cursor: initial;
-    border-color: var(--color-bd-disabled);
     background-color: var(--color-bd-disabled);
+    border-color: var(--color-bd-disabled);
+    cursor: initial;
 
     &::before {
       background-color: var(--color-bg-secondary);
@@ -67,8 +66,8 @@
     }
 
     & + .checkbox__text {
-      cursor: initial;
       color: var(--color-font-placeholder);
+      cursor: initial;
     }
   }
 }

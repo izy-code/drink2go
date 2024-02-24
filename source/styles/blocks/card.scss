@@ -2,18 +2,18 @@
 
 .card {
   display: grid;
-  grid-template-columns: auto 1fr;
   grid-template-rows: auto auto 1fr;
-  place-items: center;
+  grid-template-columns: auto 1fr;
   gap: 4px 25px;
+  place-items: center;
   padding: 40px 20px 20px;
-  border-radius: 4px;
-  background-color: var(--color-bg-basic);
   text-align: left;
+  background-color: var(--color-bg-basic);
+  border-radius: 4px;
 
   @include media-tablet {
-    padding: 50px 30px 30px;
     row-gap: 10px;
+    padding: 50px 30px 30px;
   }
 }
 
@@ -39,8 +39,8 @@
   margin-bottom: 20px;
 
   @include media-tablet {
-    margin-bottom: 20px;
     margin-right: 1px;
+    margin-bottom: 20px;
   }
 }
 

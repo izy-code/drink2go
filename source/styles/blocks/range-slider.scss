@@ -3,9 +3,9 @@
 .range-slider {
   height: 2px;
   padding: 0 12px;
+  background-color: var(--color-bg-slider-bar);
   border: none;
   border-radius: 0;
-  background-color: var(--color-bg-slider-bar);
 }
 
 .range-slider .noui-base {
@@ -17,17 +17,17 @@
 }
 
 .range-slider .noui-connects {
-  height: 4px;
   top: -0.5px;
+  height: 4px;
 }
 
 .range-slider .noui-handle {
-  height: 24px;
-  width: 24px;
   top: -11px;
   right: -12px;
-  border-radius: 12px;
+  width: 24px;
+  height: 24px;
   border: none;
+  border-radius: 12px;
   box-shadow: inset 0 0 0 2px var(--color-bd-light-accent);
   cursor: pointer;
 }
@@ -53,8 +53,8 @@
     width: 16px;
     height: 16px;
     margin: auto;
-    border-radius: 50%;
     background-color: var(--color-bg-button-transparent);
+    border-radius: 50%;
   }
 }
 
@@ -68,8 +68,8 @@
     width: 16px;
     height: 16px;
     margin: auto;
-    border-radius: 50%;
     background-color: var(--color-bg-button);
+    border-radius: 50%;
   }
 }
 

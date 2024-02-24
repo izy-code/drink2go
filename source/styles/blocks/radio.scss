@@ -14,12 +14,11 @@
   height: 24px;
   margin: 0;
   margin-right: 10px;
-
   background-color: var(--color-bg-basic);
   border: 2px solid var(--color-bd-basic);
   border-radius: 50%;
-  appearance: none;
   cursor: pointer;
+  appearance: none;
 
   .radio:hover &:not(:disabled) {
     @include media-hover {
@@ -75,17 +74,17 @@
   }
 
   &:disabled {
-    cursor: initial;
-    border-color: var(--color-bd-disabled);
     background-color: var(--color-bg-secondary);
+    border-color: var(--color-bd-disabled);
+    cursor: initial;
 
     &::before {
       background-color: var(--color-bd-disabled);
     }
 
     & + .radio__text {
-      cursor: initial;
       color: var(--color-font-placeholder);
+      cursor: initial;
     }
   }
 }

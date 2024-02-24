@@ -1,22 +1,22 @@
 @use "../global/forward" as *;
 
 .catalog {
-  padding-block: 50px 44px;
   padding-inline: calc(50% - 0.5 * $width-phone + $padding-page-phone);
-  background-color: var(--color-bg-secondary);
+  padding-block: 50px 44px;
   text-align: center;
+  background-color: var(--color-bg-secondary);
 
   @include media-tablet {
-    padding-block: 80px 90px;
     padding-inline: calc(50% - 0.5 * $width-tablet + $padding-page-tablet);
+    padding-block: 80px 90px;
   }
 
   @include media-desktop {
     display: grid;
     grid-template-columns: min-content 1fr;
     column-gap: 30px;
-    padding-block: 100px 120px;
     padding-inline: calc(50% - 0.5 * $width-desktop + $padding-page-desktop);
+    padding-block: 100px 120px;
   }
 }
 
@@ -48,15 +48,15 @@
 
 .catalog__select-container {
   display: flex;
-  width: 100%;
-  align-items: center;
   gap: 8px;
+  align-items: center;
+  width: 100%;
   margin-bottom: 16px;
   padding-left: 3px;
 
   @include media-tablet {
-    justify-content: flex-end;
     gap: 10px;
+    justify-content: flex-end;
     margin-bottom: 26px;
   }
 
@@ -78,10 +78,10 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
+  color: var(--color-font-selected);
+  background: url("../../images/icons/stack.svg#arrow-down") right 7px center / 10px 10px no-repeat;
   border: none;
   border-radius: 4px;
-  background: url("../../images/icons/stack.svg#arrow-down") right 7px center / 10px 10px no-repeat;
-  color: var(--color-font-selected);
   cursor: pointer;
   appearance: none;
 
@@ -106,8 +106,8 @@
 
   &:disabled {
     color: var(--color-font-placeholder);
-    border-color: var(--color-bd-disabled);
     background-image: url("../../images/icons/stack.svg#arrow-disabled");
+    border-color: var(--color-bd-disabled);
     cursor: initial;
   }
 }
@@ -129,20 +129,20 @@
 
   @include media-desktop {
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 60px;
     margin-right: 1px;
+    margin-bottom: 60px;
   }
 }
 
 .catalog__item {
-  &:hover {
-    @include media-hover {
+  &:nth-child(2) {
+    @include media-desktop {
       box-shadow: 0 5px 15px 0 var(--color-card-shadow);
     }
   }
 
-  @include media-desktop {
-    &:nth-child(2) {
+  &:hover {
+    @include media-hover {
       box-shadow: 0 5px 15px 0 var(--color-card-shadow);
     }
   }
@@ -180,8 +180,8 @@
     width: 10px;
     height: 10px;
     margin: auto;
-    mask: url("../../images/icons/stack.svg#arrow-pagination") center / contain no-repeat;
     background-color: var(--color-icon-hover);
+    mask: url("../../images/icons/stack.svg#arrow-pagination") center / contain no-repeat;
 
     @include media-tablet {
       display: none;
@@ -238,10 +238,10 @@
     height: unset;
     margin: 0;
     padding-inline: 12px;
-    white-space: normal;
-    border: none;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+    white-space: normal;
+    border: none;
   }
 }

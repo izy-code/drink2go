@@ -58,8 +58,8 @@
     width: 11px;
     height: 20px;
     margin: auto;
-    mask: url("../../images/icons/stack.svg#arrow-right") center / contain no-repeat;
     background-color: var(--color-icon-hover);
+    mask: url("../../images/icons/stack.svg#arrow-right") center / contain no-repeat;
   }
 
   &--prev {
@@ -112,7 +112,7 @@
 
   &--next:active:not(:disabled) {
     @include media-hover {
-      background: linear-gradient(-90deg, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0) 100%);
+      background: linear-gradient(-90deg, var(--color-bg-button-transparent), transparent 100%);
     }
   }
 
@@ -131,11 +131,11 @@
   @include media-desktop {
     @include list-reset;
 
-    grid-area: 2 / 2 / 3 / 3;
-    justify-self: center;
     display: flex;
     flex-wrap: wrap;
+    grid-area: 2 / 2 / 3 / 3;
     gap: 8px;
+    justify-self: center;
     max-width: calc($width-desktop - 2 * var(--width-button-slider-tablet));
     margin-bottom: 60px;
 
@@ -150,8 +150,8 @@
   width: 62px;
   height: 24px;
   padding: 0;
-  border: none;
   background-color: transparent;
+  border: none;
   cursor: pointer;
 
   &::before {

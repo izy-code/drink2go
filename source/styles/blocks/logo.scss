@@ -2,15 +2,15 @@
 
 .logo {
   display: inline-flex;
+  gap: 20px;
   align-items: center;
   text-decoration: none;
-  gap: 20px;
 
   &--footer {
     @include media-desktop {
       flex-direction: column;
-      align-items: start;
       gap: 10px;
+      align-items: start;
     }
   }
 }
@@ -18,16 +18,8 @@
 .logo__icon {
   display: block;
   width: 32px;
-  height: 36px;
   max-width: none;
-
-  .logo--footer & {
-    width: 82px;
-
-    @include media-tablet {
-      width: 170px;
-    }
-  }
+  height: 36px;
 
   @include media-tablet {
     width: 82px;
@@ -35,6 +27,14 @@
 
   @include media-desktop {
     width: 170px;
+  }
+
+  .logo--footer & {
+    width: 82px;
+
+    @include media-tablet {
+      width: 170px;
+    }
   }
 }
 

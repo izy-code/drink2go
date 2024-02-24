@@ -10,8 +10,8 @@
   }
 
   @include media-desktop {
-    justify-content: space-between;
     column-gap: 40px;
+    justify-content: space-between;
   }
 }
 
@@ -30,22 +30,20 @@
 
 .header__toggle {
   display: block;
-  border: none;
   width: 52px;
   height: 60px;
   margin-inline: 4px -16px;
   padding: 0;
-  cursor: pointer;
   background: url("../../images/icons/stack.svg#burger") center / 16px 16px no-repeat;
-
-  .header--js-menu-opened & {
-    @media (max-width: $width-tablet - 1px) {
-      background-image: url("../../images/icons/stack.svg#cross");
-    }
-  }
+  border: none;
+  cursor: pointer;
 
   @include media-tablet {
     display: none;
+  }
+
+  .header--js-menu-opened & {
+    background-image: url("../../images/icons/stack.svg#cross");
   }
 
   &:active {

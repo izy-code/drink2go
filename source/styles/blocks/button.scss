@@ -7,19 +7,19 @@
   padding: 8px 20px;
   font-family: var(--font-primary);
   font-size: 16px;
-  text-align: center;
-  font-weight: 400;
   line-height: 24px;
+  font-weight: 400;
+  text-align: center;
   text-decoration: none;
+  color: var(--color-font-secondary);
   background-color: var(--color-bg-button);
   border: none;
   border-radius: 4px;
-  color: var(--color-font-secondary);
   cursor: pointer;
 
   &--secondary {
-    background-color: var(--color-bg-basic);
     color: var(--color-font-selected);
+    background-color: var(--color-bg-basic);
   }
 
   &--icon {
@@ -41,14 +41,14 @@
   &:hover:not(:disabled),
   &:focus-visible:not(:disabled) {
     @include media-hover {
-      background-color: var(--color-bg-button-hover);
       color: var(--color-font-secondary);
+      background-color: var(--color-bg-button-hover);
     }
   }
 
   &:active:not(:disabled) {
-    background-color: var(--color-bg-button-active);
     color: var(--color-font-secondary);
+    background-color: var(--color-bg-button-active);
   }
 
   &:disabled {
@@ -57,7 +57,7 @@
   }
 
   &--secondary:disabled {
-    background-color: var(--color-bg-button-disabled-secondary);
     color: var(--color-font-secondary);
+    background-color: var(--color-bg-button-disabled-secondary);
   }
 }

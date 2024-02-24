@@ -1,17 +1,17 @@
 .academy {
   display: flex;
   column-gap: 3px;
-  font-size: 12px;
-  line-height: 16px;
   justify-content: center;
   align-items: center;
+  font-size: 12px;
+  line-height: 16px;
   color: var(--color-font-placeholder);
 }
 
 .academy__link {
   display: flex;
-  align-items: center;
   column-gap: 4px;
+  align-items: center;
   padding-block: 10px;
   text-decoration: none;
   color: var(--color-font-placeholder);
@@ -20,22 +20,25 @@
   &:focus-visible {
     @media (hover: hover) {
       color: var(--color-font-selected);
-
-      & .academy__icon {
-        fill: var(--color-font-selected);
-      }
     }
   }
 
   &:active {
     color: var(--color-font-active);
-
-    & .academy__icon {
-      fill: var(--color-font-active);
-    }
   }
 }
 
 .academy__icon {
   fill: var(--color-icon-disabled);
+
+  .academy__link:hover &,
+  .academy__link:focus-visible & {
+    @media (hover: hover) {
+      fill: var(--color-font-selected);
+    }
+  }
+
+  .academy__link:active & {
+    fill: var(--color-font-active);
+  }
 }

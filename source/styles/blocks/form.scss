@@ -116,9 +116,9 @@
   }
 
   &:disabled {
+    color: var(--color-font-placeholder);
     background: var(--color-bg-secondary);
     border-color: var(--color-bd-disabled);
-    color: var(--color-font-placeholder);
   }
 }
 
@@ -142,8 +142,8 @@
 
   @include media-tablet {
     flex-direction: row;
-    justify-content: center;
     gap: 20px;
+    justify-content: center;
     width: 100%;
   }
 
