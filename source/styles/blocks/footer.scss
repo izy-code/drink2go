@@ -26,18 +26,22 @@
   }
 }
 
-.footer__socials,
-.footer__dev {
-  @include media-tablet {
-    width: 100%;
-  }
-}
-
 .footer__contacts,
 .footer__shop,
 .footer__media {
   @include media-tablet {
     flex: 1 1 0;
+  }
+}
+
+.footer__socials {
+  @include media-tablet {
+    width: 100%;
+  }
+
+  @include media-desktop {
+    flex: 1 1 0;
+    width: unset;
   }
 }
 
@@ -47,6 +51,7 @@
   padding-inline: calc(50% - 0.5 * $width-phone + $padding-page-phone);
 
   @include media-tablet {
+    width: 100%;
     padding-inline: 0;
     margin-top: 0;
   }

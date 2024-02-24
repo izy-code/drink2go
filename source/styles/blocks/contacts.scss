@@ -2,6 +2,10 @@
 
 .contacts {
   padding-block: 20px 16px;
+
+  @include media-desktop {
+    padding-block: 20px 6px;
+  }
 }
 
 .contacts__heading {
