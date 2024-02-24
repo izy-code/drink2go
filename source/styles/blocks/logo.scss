@@ -15,6 +15,10 @@
 
   .logo--footer & {
     width: 82px;
+
+    @include media-tablet {
+      width: 170px;
+    }
   }
 
   @include media-tablet {

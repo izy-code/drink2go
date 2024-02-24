@@ -3,7 +3,14 @@
 .footer {
   display: flex;
   flex-direction: column;
-  padding-block: 20px 10px;
+  padding-block: 10px 10px;
+
+  @include media-tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    padding-block: 30px 20px;
+  }
 }
 
 .footer__socials,
@@ -19,6 +26,21 @@
   }
 }
 
+.footer__socials,
+.footer__dev {
+  @include media-tablet {
+    width: 100%;
+  }
+}
+
+.footer__contacts,
+.footer__shop,
+.footer__media {
+  @include media-tablet {
+    flex: 1 1 0;
+  }
+}
+
 .footer__dev {
   order: 10;
   margin-block: 10px;
@@ -26,5 +48,6 @@
 
   @include media-tablet {
     padding-inline: 0;
+    margin-top: 0;
   }
 }

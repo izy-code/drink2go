@@ -16,5 +16,10 @@
   @include media-tablet {
     font-size: 42px;
     line-height: 64px;
+
+    &--footer {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
