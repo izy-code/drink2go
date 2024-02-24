@@ -21,7 +21,7 @@
 
 .footer__dev {
   order: 10;
-  margin-block: 20px;
+  margin-block: 10px;
   padding-inline: calc(50% - 0.5 * $width-phone + $padding-page-phone);
 
   @include media-tablet {
