@@ -66,9 +66,14 @@
 }
 
 .catalog__select-label {
+  margin-right: auto;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
+
+  @include media-tablet {
+    margin-right: 0;
+  }
 }
 
 .catalog__select {
@@ -88,6 +93,11 @@
   @include media-tablet {
     width: 165px;
     background-position: right 10px center;
+  }
+
+  @include media-desktop {
+    margin-right: 1px;
+    padding-right: 30px;
   }
 
   &:hover:not(:disabled),
