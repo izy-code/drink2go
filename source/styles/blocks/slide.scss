@@ -14,6 +14,7 @@
 
   @include media-desktop {
     grid-template-columns: 1fr 655px calc($width-desktop - 2 * var(--width-button-slider-tablet) - 655px) 1fr;
+    align-items: center;
     padding-top: 30px;
   }
 }
