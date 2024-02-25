@@ -6,87 +6,89 @@
   background-color: var(--color-bg-slider-bar);
   border: none;
   border-radius: 0;
-}
 
-.range-slider .noui-base {
-  top: -0.5px;
-}
-
-.range-slider .noui-connect {
-  background-color: var(--color-bg-slider-connect);
-}
-
-.range-slider .noui-connects {
-  top: -0.5px;
-  height: 4px;
-}
-
-.range-slider .noui-handle {
-  top: -11px;
-  right: -12px;
-  width: 24px;
-  height: 24px;
-  border: none;
-  border-radius: 12px;
-  box-shadow: inset 0 0 0 2px var(--color-bd-light-accent);
-  cursor: pointer;
-}
-
-.range-slider .noui-handle::before,
-.range-slider .noui-handle::after {
-  display: none;
-}
-
-.range-slider .noui-handle:hover,
-.range-slider .noui-handle:focus-visible {
-  @include media-hover {
-    outline: none;
+  & .noui-base {
+    top: -0.5px;
   }
-}
 
-.range-slider .noui-handle:hover::before,
-.range-slider .noui-handle:focus-visible::before {
-  @include media-hover {
-    content: "";
-    inset: 0;
-    display: block;
-    width: 16px;
-    height: 16px;
-    margin: auto;
-    background-color: var(--color-bg-button-transparent);
-    border-radius: 50%;
+  & .noui-connect {
+    background-color: var(--color-bg-slider-connect);
   }
-}
 
-.range-slider .noui-handle:active {
-  box-shadow: inset 0 0 0 2px var(--color-bd-accent);
-
-  &::before {
-    content: "";
-    inset: 0;
-    display: block;
-    width: 16px;
-    height: 16px;
-    margin: auto;
-    background-color: var(--color-bg-button);
-    border-radius: 50%;
+  & .noui-connects {
+    top: -0.5px;
+    height: 4px;
   }
-}
 
-.range-slider[disabled] .noui-connects {
-  cursor: default;
-}
+  & .noui-handle {
+    top: -11px;
+    right: -12px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: inset 0 0 0 2px var(--color-bd-light-accent);
+    cursor: pointer;
 
-.range-slider[disabled] .noui-handle::before {
-  display: none;
-}
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 
-.range-slider[disabled] .noui-connect {
-  background-color: var(--color-bg-button-disabled);
-  cursor: default;
-}
+  & .noui-handle:hover,
+  & .noui-handle:focus-visible {
+    @include media-hover {
+      outline: none;
+    }
+  }
 
-.range-slider[disabled] .noui-handle {
-  box-shadow: inset 0 0 0 2px var(--color-bg-button-disabled);
-  cursor: default;
+  & .noui-handle:hover::before,
+  & .noui-handle:focus-visible::before {
+    @include media-hover {
+      content: "";
+      inset: 0;
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin: auto;
+      background-color: var(--color-bg-button-transparent);
+      border-radius: 50%;
+    }
+  }
+
+  & .noui-handle:active {
+    box-shadow: inset 0 0 0 2px var(--color-bd-accent);
+
+    &::before {
+      content: "";
+      inset: 0;
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin: auto;
+      background-color: var(--color-bg-button);
+      border-radius: 50%;
+    }
+  }
+
+  &[disabled] {
+    & .noui-connects {
+      cursor: default;
+    }
+
+    & .noui-handle::before {
+      display: none;
+    }
+
+    & .noui-connect {
+      background-color: var(--color-bg-button-disabled);
+      cursor: default;
+    }
+
+    & .noui-handle {
+      box-shadow: inset 0 0 0 2px var(--color-bg-button-disabled);
+      cursor: default;
+    }
+  }
 }
