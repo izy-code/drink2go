@@ -27,7 +27,7 @@
     height: 20px;
     background-color: var(--color-bg-basic);
     border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
   }
 
   .checkbox:hover &:not(:disabled) {
