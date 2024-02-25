@@ -30,6 +30,7 @@
 
 .academy__icon {
   fill: var(--color-icon-disabled);
+  pointer-events: none;
 
   .academy__link:hover &,
   .academy__link:focus-visible & {
