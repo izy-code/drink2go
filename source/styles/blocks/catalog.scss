@@ -167,6 +167,7 @@
   align-items: center;
 
   @include media-tablet {
+    align-content: flex-start;
     width: fit-content;
     margin-left: auto;
   }
@@ -177,7 +178,6 @@
   justify-content: center;
   align-items: center;
   min-width: 40px;
-  max-width: 180px;
   min-height: 40px;
   padding: 8px;
   font-size: 16px;
