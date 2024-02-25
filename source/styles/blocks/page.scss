@@ -21,11 +21,11 @@
 }
 
 .page__header {
-  width: $width-phone - 2 * $padding-page-phone;
-  margin-inline: auto;
+  width: 100%;
 
   @include media-tablet {
     width: $width-tablet - 2 * $padding-page-tablet;
+    margin-inline: auto;
   }
 
   @include media-desktop {

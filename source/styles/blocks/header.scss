@@ -4,9 +4,11 @@
   position: relative;
   display: flex;
   align-items: flex-start;
+  padding-inline: calc(50% - 0.5 * $width-phone + $padding-page-phone);
 
   @include media-tablet {
     column-gap: 20px;
+    padding-inline: 0;
   }
 
   @include media-desktop {
