@@ -4,18 +4,6 @@
   display: grid;
   grid-template-columns: $padding-page-phone 1fr $padding-page-phone;
 
-  &:has(.slider__slide--first.slider__slide--current) {
-    background-color: var(--color-bg-first-slide);
-  }
-
-  &:has(.slider__slide--second.slider__slide--current) {
-    background-color: var(--color-bg-second-slide);
-  }
-
-  &:has(.slider__slide--third.slider__slide--current) {
-    background-color: var(--color-bg-third-slide);
-  }
-
   @include media-tablet {
     --width-button-slider-tablet: 80px;
 
@@ -27,6 +15,18 @@
       1fr var(--width-button-slider-tablet)
       min(calc($width-max - 2 * var(--width-button-slider-tablet)), calc(100% - 2 * var(--width-button-slider-tablet)))
       var(--width-button-slider-tablet) 1fr;
+  }
+
+  &:has(.slider__slide--first.slider__slide--current) {
+    background-color: var(--color-bg-first-slide);
+  }
+
+  &:has(.slider__slide--second.slider__slide--current) {
+    background-color: var(--color-bg-second-slide);
+  }
+
+  &:has(.slider__slide--third.slider__slide--current) {
+    background-color: var(--color-bg-third-slide);
   }
 }
 
