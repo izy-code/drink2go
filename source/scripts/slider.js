@@ -1,5 +1,5 @@
 const sliderNode = document.querySelector('.slider');
-const slideNodes = sliderNode.querySelectorAll('.slide');
+const slideNodes = sliderNode.querySelectorAll('.slider__slide');
 const buttonPrevNode = sliderNode.querySelector('.slider-button-prev');
 const buttonNextNode = sliderNode.querySelector('.slider-button-next');
 const paginationNode = sliderNode.querySelector('.slider-pagination');
@@ -8,11 +8,11 @@ const paginationButtonNodes = paginationNode.querySelectorAll('.slider__paginati
 let currentSlideNumber = 0;
 
 const handleSlideSwitch = (newShownSlideNumber) => {
-  slideNodes[currentSlideNumber].classList.remove('slide--current');
+  slideNodes[currentSlideNumber].classList.remove('slider__slide--current');
   paginationButtonNodes[currentSlideNumber].classList.remove('slider__pagination-btn--current');
   paginationButtonNodes[currentSlideNumber].disabled = false;
   currentSlideNumber = newShownSlideNumber;
-  slideNodes[currentSlideNumber].classList.add('slide--current');
+  slideNodes[currentSlideNumber].classList.add('slider__slide--current');
   paginationButtonNodes[currentSlideNumber].classList.add('slider__pagination-btn--current');
   paginationButtonNodes[currentSlideNumber].disabled = true;
 

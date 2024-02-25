@@ -4,6 +4,18 @@
   display: grid;
   grid-template-columns: $padding-page-phone 1fr $padding-page-phone;
 
+  &:has(.slider__slide--first.slider__slide--current) {
+    background-color: var(--color-bg-first-slide);
+  }
+
+  &:has(.slider__slide--second.slider__slide--current) {
+    background-color: var(--color-bg-second-slide);
+  }
+
+  &:has(.slider__slide--third.slider__slide--current) {
+    background-color: var(--color-bg-third-slide);
+  }
+
   @include media-tablet {
     --width-button-slider-tablet: 80px;
 
@@ -23,18 +35,19 @@
 
   grid-area: 1 / 1 / 2 / 4;
 
-  @include media-desktop {
-    grid-area: 1 / 1 / 3 / 4;
-  }
-
   @include media-max {
-    grid-area: 1 / 1 / 3 / 6;
+    grid-area: 1 / 1 / 2 / 6;
   }
 }
 
 .slider__slide {
+  display: none;
   width: 100%;
   height: 100%;
+
+  &--current {
+    display: grid;
+  }
 }
 
 .slider__btn {

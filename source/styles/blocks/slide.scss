@@ -1,7 +1,6 @@
 @use "../global/forward" as *;
 
 .slide {
-  display: none;
   grid-template-columns: 1fr $width-phone - 2 * $padding-page-phone 1fr;
   justify-items: center;
   width: 100%;
@@ -15,23 +14,7 @@
 
   @include media-desktop {
     grid-template-columns: 1fr 655px calc($width-desktop - 2 * var(--width-button-slider-tablet) - 655px) 1fr;
-    padding-block: 30px 84px;
-  }
-
-  &--current {
-    display: grid;
-  }
-
-  &--first {
-    background-color: var(--color-bg-first-slide);
-  }
-
-  &--second {
-    background-color: var(--color-bg-second-slide);
-  }
-
-  &--third {
-    background-color: var(--color-bg-third-slide);
+    padding-top: 30px;
   }
 }
 
