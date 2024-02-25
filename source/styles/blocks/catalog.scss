@@ -167,7 +167,8 @@
   align-items: center;
 
   @include media-tablet {
-    justify-content: flex-end;
+    width: fit-content;
+    margin-left: auto;
   }
 }
 
