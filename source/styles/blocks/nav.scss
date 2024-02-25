@@ -78,6 +78,7 @@
   text-decoration: none;
   text-transform: uppercase;
   color: var(--color-font-basic);
+  outline-offset: -1px;
 
   @include media-tablet {
     width: fit-content;
@@ -160,6 +161,7 @@
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
+  outline-offset: -1px;
 
   @include media-tablet {
     height: 80px;
