@@ -13,6 +13,7 @@
 
   @include media-desktop {
     display: grid;
+    grid-template-rows: repeat(4, min-content) 1fr;
     grid-template-columns: min-content 1fr;
     column-gap: 30px;
     padding-inline: calc(50% - 0.5 * $width-desktop + $padding-page-desktop);
