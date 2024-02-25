@@ -20,6 +20,7 @@
     }
 
     & .noui-handle {
+      background-color: var(--color-bg-secondary);
       box-shadow: inset 0 0 0 2px var(--color-bg-button-disabled);
       cursor: default;
     }
